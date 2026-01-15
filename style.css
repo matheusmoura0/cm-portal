@@ -1,0 +1,1009 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #E63946;
+    /* Red for accents/buttons */
+    --secondary-color: #1D3557;
+    /* Dark Blue for headers if needed */
+    --text-dark: #111111;
+    --text-medium: #555555;
+    --text-light: #888888;
+    --bg-light: #F8F9FA;
+    --border-color: #EEEEEE;
+    --white: #FFFFFF;
+    --black: #000000;
+    --footer-bg: #1a1a1a;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --container-width: 1200px;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: --font-body;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Typography Utils */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 8px;
+    font-family: var(--font-body);
+}
+
+.date-meta {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 5px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Top Bar Region Themes */
+body.region-rio .top-bar {
+    background-color: #E63946;
+}
+
+body.region-sul .top-bar {
+    background-color: #2a9d8f;
+}
+
+body.region-petropolis .top-bar {
+    background-color: #9d4edd;
+}
+
+body.region-serrana .top-bar {
+    background-color: #e76f51;
+}
+
+body.region-sp .top-bar {
+    background-color: #264653;
+}
+
+/* Header */
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-brand h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+/* Context Pill */
+.header-context-pill {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Push arrow to right */
+    gap: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-family: var(--font-body);
+    transition: all 0.2s;
+    min-width: 180px;
+    /* Fixed width to prevent jumping */
+}
+
+.header-context-pill:hover {
+    background: #f9f9f9;
+}
+
+.header-context-pill i.fa-chevron-down {
+    font-size: 0.7rem;
+    color: #999;
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+.header-context-pill.active i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Pill Variants & Themes */
+.pill-rio {
+    border-color: #E63946;
+}
+
+.pill-rio strong,
+.pill-rio i {
+    color: #E63946;
+}
+
+.pill-sul {
+    border-color: #2a9d8f;
+}
+
+.pill-sul strong,
+.pill-sul i {
+    color: #2a9d8f;
+}
+
+.pill-petropolis {
+    border-color: #9d4edd;
+}
+
+.pill-petropolis strong,
+.pill-petropolis i {
+    color: #9d4edd;
+}
+
+.pill-serrana {
+    border-color: #e76f51;
+}
+
+.pill-serrana strong,
+.pill-serrana i {
+    color: #e76f51;
+}
+
+.pill-sp {
+    border-color: #264653;
+}
+
+.pill-sp strong,
+.pill-sp i {
+    color: #264653;
+}
+
+/* Dropdown Menu */
+.header-context-pill {
+    position: relative;
+    /* Anchor for dropdown */
+}
+
+.region-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+.region-dropdown-menu.show {
+    display: block;
+}
+
+/* Remove hover effect */
+/* .header-context-pill:hover .region-dropdown-menu { display: block; } */
+
+.region-dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #333;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+}
+
+.region-dropdown-menu a:hover {
+    background: #f5f5f5;
+}
+
+/* Dropdown Item Colors - Text & Left Border on Hover */
+.dd-rio {
+    color: #E63946 !important;
+}
+
+.dd-rio:hover {
+    border-left-color: #E63946;
+    background: #fff5f5 !important;
+}
+
+.dd-sul {
+    color: #2a9d8f !important;
+}
+
+.dd-sul:hover {
+    border-left-color: #2a9d8f;
+    background: #e0f2f1 !important;
+}
+
+.dd-petropolis {
+    color: #9d4edd !important;
+}
+
+.dd-petropolis:hover {
+    border-left-color: #9d4edd;
+    background: #f3e5f5 !important;
+}
+
+.dd-serrana {
+    color: #e76f51 !important;
+}
+
+.dd-serrana:hover {
+    border-left-color: #e76f51;
+    background: #fbe9e7 !important;
+}
+
+.dd-sp {
+    color: #264653 !important;
+}
+
+.dd-sp:hover {
+    border-left-color: #264653;
+    background: #eceff1 !important;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+    font-family: var(--font-heading);
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+/* Main Layout Grid */
+.main-content {
+    margin-top: 30px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Hero Section */
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    /* fallback */
+    background-color: #ddd;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.hero-excerpt {
+    color: var(--text-medium);
+    font-size: 1.1rem;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ad-space {
+    background-color: #f0f0f0;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    border: 1px dashed #ccc;
+    font-size: 0.9rem;
+}
+
+.newsletter-widget {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.newsletter-widget h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.newsletter-widget input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 2px;
+}
+
+.newsletter-widget button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+/* News Grid Section */
+.section-title {
+    font-family: var(--font-heading);
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-card img {
+    height: 180px;
+    object-fit: cover;
+    background-color: #eee;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.news-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.news-card p {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+/* Footer (Correio da Manhã Style) */
+footer {
+    background-color: var(--footer-bg);
+    color: #ccc;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.company-info p {
+    margin-bottom: 15px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        /* Full width */
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Home Mobile Adjustments */
+    .home-hero-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .columnists-grid,
+    .editorials-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-nav {
+        display: none;
+        /* Hide nav for simple mobile view for now, usually needs a hamburger */
+    }
+
+    .header-main .container {
+        justify-content: center;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        font-size: 0.7rem;
+    }
+}
+
+/* =========================================
+   HOMEPAGE SPECIFIC STYLES
+   ========================================= */
+
+/* Home Hero Section */
+.home-hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.main-featured-article h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-top: 15px;
+    line-height: 1.1;
+}
+
+.main-featured-article .excerpt {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    margin-top: 10px;
+}
+
+.sub-featured-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sub-article h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1.3;
+}
+
+/* Columnists Section */
+.columnists-section {
+    background-color: var(--bg-light);
+    padding: 60px 0;
+    margin: 40px 0;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.star-icon-box {
+    background-color: #E63946;
+    /* Using Primary Color */
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.columnists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.columnist-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.columnist-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.columnist-info h4 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.columnist-role {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.columnist-title-post {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+/* Editorials Grid (Bottom Home) */
+.editorials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.editoria-col h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+
+.editoria-news-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.editoria-news-item img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.editoria-news-item h4 {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin: 0;
+    font-family: var(--font-body);
+    /* More dense */
+}
+
+.read-more-btn {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Region Popover/Dropdown fake */
+.region-dropdown {
+    position: absolute;
+}
+
+/* =========================================
+   ARTICLE PAGE STYLES
+   ========================================= */
+
+.article-container {
+    max-width: 100%;
+}
+
+.article-tags {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.tag-pill {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 4px;
+    /* slightly rounded but square-ish */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.article-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.article-meta {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.share-toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.share-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.share-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.article-featured-image {
+    margin-bottom: 30px;
+}
+
+.article-featured-image img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.article-featured-image figcaption {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.article-body {
+    font-family: var(--font-body);
+    /* Modern sans-serif reading experience */
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #222;
+}
+
+.article-body p {
+    margin-bottom: 20px;
+}
+
+.article-body h3 {
+    font-family: var(--font-heading);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.article-body ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.article-body li {
+    margin-bottom: 10px;
+}
+
+/* Sidebar Widgets */
+.related-news-widget {
+    margin-bottom: 30px;
+}
+
+.widget-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.related-item {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.related-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.tag-mini {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.related-item h4 {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.related-item .meta {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* =========================================
+   HUB PAGES (Editorias, Colunistas, Região)
+   ========================================= */
+
+/* Shared Grid Layout */
+.hub-grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Shared Card Styles */
+.card-hub {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    height: 100%;
+    /* Equal height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-hub:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #ddd;
+}
+
+/* Specific Card: Editoria Type */
+.card-editoria:hover {
+    border-color: var(--primary-color);
+}
+
+.hub-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hub-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: auto;
+    /* Push to bottom */
+}
+
+/* Specific Card: Colunista Type */
+.card-colunista .colunista-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #eee;
+}
+
+.card-colunista .role {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.card-colunista .excerpt {
+    color: #555;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+.btn-read {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.2s;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+.btn-read:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Responsive Hub */
+@media (max-width: 900px) {
+
+    .grid-cols-4,
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hub-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-hub {
+        padding: 20px;
+    }
+}

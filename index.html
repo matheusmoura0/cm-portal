@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correio da Manhã - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-calendar-alt"></i> Segunda-feira, 8 de setembro de 2025</span>
+                <span id="top-city"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro | 34°C Parcialmente
+                    nublado</span>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="fas fa-dollar-sign"></i> USD: R$ 5,34 <span style="color: #ffcccc;">-0.01%</span></span>
+                <span>Edição Digital</span>
+                <span>Newsletter</span>
+                <span>Assine</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="site-brand">
+                    <h1>Correio da Manhã</h1>
+                </div>
+
+                <!-- Region Selector -->
+                <div class="header-context-pill pill-rio" id="regionPill">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Rio de Janeiro</strong>
+                    <i class="fas fa-chevron-down"></i>
+
+                    <!-- Dropdown Menu -->
+                    <div class="region-dropdown-menu">
+                        <a href="?region=rio" class="dd-rio">Rio de Janeiro</a>
+                        <a href="?region=sul" class="dd-sul">Sul Fluminense</a>
+                        <a href="?region=petropolis" class="dd-petropolis">Petropolitana</a>
+                        <a href="?region=sp" class="dd-sp"> Estado de São Paulo</a>
+                    </div>
+                </div>
+
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="category.html" id="menu-region">Rio de Janeiro</a></li>
+                        <li><a href="sections.html">Editorias</a></li>
+                        <li><a href="columnists.html">Colunistas</a></li>
+                        <li><a href="regions.html">Região</a></li>
+                        <li><a href="#">Nossos Correios</a></li>
+                        <li><a href="#">Especiais</a></li>
+                    </ul>
+                </nav>
+
+                <div class="search-icon">
+                    <i class="fas fa-search"></i> Buscar notícias...
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+
+        <!-- Home Hero Grid -->
+        <section class="home-hero-grid">
+            <!-- Left: Main Featured -->
+            <article class="main-featured-article">
+                <a href="article.html">
+                    <div style="position: relative;">
+                        <span class="tag" style="position: absolute; top: 15px; left: 15px; background: #007bff;">Região
+                            do
+                            Vale / Pinheiral</span>
+                        <img src="https://placehold.co/800x500/333/fff?text=Noticia+Principal" alt="Destaque"
+                            style="width: 100%; border-radius: 8px;">
+                    </div>
+                    <h2>Circulação de animais rurais gera transtorno em Pinheiral</h2>
+                </a>
+                <p class="excerpt">A circulação constante de animais rurais no bairro Jardim Real, em Pinheiral, já é um
+
+                <p class="excerpt">A circulação constante de animais rurais no bairro Jardim Real, em Pinheiral, já é um
+                    problema antigo que causa insatisfação entre os moradores.</p>
+                <p class="date-meta" style="margin-top: 15px;">
+                    <span><i class="far fa-user"></i> Redação</span>
+                    <span><i class="far fa-clock"></i> 08/09/2025</span>
+                </p>
+            </article>
+
+            <!-- Right: Sub Features -->
+            <div class="sub-featured-grid">
+                <article class="sub-article">
+                    <div style="position: relative;">
+                        <span class="tag" style="position: absolute; top: 10px; left: 10px; background: #007bff;">Região
+                            do Vale</span>
+                        <img src="https://placehold.co/400x200/444/fff?text=Festival+Curta" alt="Thumb"
+                            style="width: 100%; border-radius: 6px;">
+                    </div>
+                    <h3>Pinheiral lança festival de curta metragem para incentivar produção...</h3>
+                    <p class="date-meta">08/09/2025</p>
+                </article>
+
+                <article class="sub-article">
+                    <div style="position: relative;">
+                        <span class="tag" style="position: absolute; top: 10px; left: 10px; background: #007bff;">Barra
+                            Mansa</span>
+                        <img src="https://placehold.co/400x200/555/fff?text=Manutencao+Bomba" alt="Thumb"
+                            style="width: 100%; border-radius: 6px;">
+                    </div>
+                    <h3>Saae-BM realiza manutenção em bomba principal que abastece Santa Rosa</h3>
+                    <p class="date-meta">08/09/2025</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ad Banner -->
+        <div class="ad-space" style="height: 100px; margin-bottom: 50px; background: #fafafa; border: 1px solid #eee;">
+            ESPAÇO PUBLICITÁRIO - Banner 728x90
+        </div>
+
+    </div> <!-- End Container for White BG Section -->
+
+    <!-- Columnists Section (Full Width BG) -->
+    <section class="columnists-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="star-icon-box">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div>
+                    <h2 style="margin: 0;">Colunistas em Destaque</h2>
+                    <p style="color: #666; margin: 0; font-size: 0.9rem;">Análises exclusivas dos nossos especialistas
+                    </p>
+                </div>
+                <a href="#" class="read-more-btn" style="margin-left: auto; margin-top: 0; background: #fff;">Ver todos
+                    os colunistas <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="columnists-grid">
+                <!-- Col 1 -->
+                <div class="columnist-card">
+                    <img src="https://placehold.co/100x100/orange/white?text=M" alt="Magnavita"
+                        class="columnist-avatar">
+                    <div class="columnist-info">
+                        <h4>Magnavita</h4>
+                        <span class="columnist-role">Analista Político</span>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+                        <p class="columnist-title-post">A Conjuntura Política e os Desafios de 2026</p>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="columnist-card">
+                    <img src="https://placehold.co/100x100/gray/white?text=FM" alt="Fernando" class="columnist-avatar">
+                    <div class="columnist-info">
+                        <h4>Fernando Molica</h4>
+                        <span class="columnist-role">Jornalista Político</span>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+                        <p class="columnist-title-post">Mudanças no Cenário Político Nacional</p>
+                    </div>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="columnist-card">
+                    <img src="https://placehold.co/100x100/blue/white?text=RL" alt="Rudolfo" class="columnist-avatar">
+                    <div class="columnist-info">
+                        <h4>Rudolfo Lago</h4>
+                        <span class="columnist-role">Especialista em RI</span>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+                        <p class="columnist-title-post">Brasil no Cenário Internacional em 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorials Section -->
+    <div class="container" style="margin-bottom: 60px;">
+        <div class="section-header">
+            <h2 style="font-size: 2rem;">Matérias por Editoria</h2>
+        </div>
+        <p style="color: #666; margin-top: -20px; margin-bottom: 30px;">Acompanhe as principais notícias organizadas por
+            categoria</p>
+
+        <div class="editorials-grid">
+            <!-- Politics -->
+            <div class="editoria-col">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
+                    <h3 style="border: 0; margin: 0; padding: 0;">Política</h3>
+                    <a href="editoria.html" style="font-size: 0.8rem; color: #666;">Ver todas</a>
+                </div>
+
+                <div class="editoria-news-item">
+                    <img src="https://placehold.co/150x100?text=Barra" alt="Thumb">
+                    <h4>Barra Mansa: Manutenção Urbana realiza serviços...</h4>
+                </div>
+                <div class="editoria-news-item">
+                    <img src="https://placehold.co/150x100?text=Resende" alt="Thumb">
+                    <h4>Prefeitura de Resende anuncia investimentos...</h4>
+                </div>
+            </div>
+
+            <!-- Sports -->
+            <div class="editoria-col">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
+                    <h3 style="border: 0; margin: 0; padding: 0;">Esporte</h3>
+                    <a href="#" style="font-size: 0.8rem; color: #666;">Ver todas</a>
+                </div>
+                <div class="editoria-news-item">
+                    <img src="https://placehold.co/150x100?text=Volta" alt="Thumb">
+                    <h4>Volta Redonda FC anuncia novos reforços...</h4>
+                </div>
+                <div class="editoria-news-item">
+                    <img src="https://placehold.co/150x100?text=Futebol" alt="Thumb">
+                    <h4>Campeonato Municipal de Futebol de Barra...</h4>
+                </div>
+            </div>
+
+            <!-- Economy -->
+            <div class="editoria-col">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
+                    <h3 style="border: 0; margin: 0; padding: 0;">Economia</h3>
+                    <a href="#" style="font-size: 0.8rem; color: #666;">Ver todas</a>
+                </div>
+                <div class="editoria-news-item">
+                    <img src="https://placehold.co/150x100?text=Sul" alt="Thumb">
+                    <h4>Sul Fluminense registra crescimento no setor...</h4>
+                </div>
+                <div class="editoria-news-item">
+                    <img src="https://placehold.co/150x100?text=Tech" alt="Thumb">
+                    <h4>Novos investimentos em tecnologia chegam...</h4>
+                </div>
+            </div>
+
+            <!-- Culture -->
+            <div class="editoria-col">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
+                    <h3 style="border: 0; margin: 0; padding: 0;">Cultura</h3>
+                    <a href="#" style="font-size: 0.8rem; color: #666;">Ver todas</a>
+                </div>
+                <div class="editoria-news-item">
+                    <img src="https://placehold.co/150x100?text=Fest" alt="Thumb">
+                    <h4>Festival de Inverno em Petrópolis atrai...</h4>
+                </div>
+                <div class="editoria-news-item">
+                    <img src="https://placehold.co/150x100?text=Museu" alt="Thumb">
+                    <h4>Museu de Arte lança nova exposição...</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="ad-space" style="height: 100px; margin-top: 50px;">
+            ESPAÇO PUBLICITÁRIO - Banner Largo
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="site-brand" style="margin-bottom: 20px;">
+                        <h2 style="color: #fff;">Correio da Manhã</h2>
+                    </div>
+                    <p>Fundado em 1901, o Correio da Manhã é tradição no jornalismo brasileiro.</p>
+                    <br>
+                    <p><i class="far fa-envelope"></i> redacao@correiodamanha.com.br</p>
+                    <p><i class="fas fa-phone"></i> (21) 2221-2221</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Nossas Edições</h4>
+                    <ul>
+                        <li><a href="#">Sul Fluminense</a></li>
+                        <li><a href="#">Petropolitana</a></li>
+                        <li><a href="#">Estado de São Paulo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Editorias</h4>
+                    <ul>
+                        <li><a href="#">Política</a></li>
+                        <li><a href="#">Economia</a></li>
+                        <li><a href="#">Rio de Janeiro</a></li>
+                        <li><a href="#">Esportes</a></li>
+                        <li><a href="#">Cultura</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Sobre o Correio</a></li>
+                        <li><a href="#">Política Editorial</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="float: left;">
+                    <p>Siga o Correio da Manhã</p>
+                    <!-- Social icons would go here -->
+                </div>
+                <div style="float: right;">
+                    <p>© 2026 Correio da Manhã. Todos os direitos reservados.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

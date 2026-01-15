@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correio da Manhã - Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-calendar-alt"></i> Segunda-feira, 8 de setembro de 2025</span>
+                <span id="top-city"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro | 34°C Parcialmente
+                    nublado</span>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="fas fa-dollar-sign"></i> USD: R$ 5,34 <span style="color: #ffcccc;">-0.01%</span></span>
+                <span>Edição Digital</span>
+                <span>Newsletter</span>
+                <span>Assine</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="site-brand">
+                    <h1><a href="index.html">Correio da Manhã</a></h1>
+                </div>
+
+                <!-- Region Selector -->
+                <div class="header-context-pill pill-rio" id="regionPill">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Rio de Janeiro</strong>
+                    <i class="fas fa-chevron-down"></i>
+
+                    <div class="region-dropdown-menu">
+                        <a href="?region=rio" class="dd-rio">Rio de Janeiro</a>
+                        <a href="?region=sul" class="dd-sul">Sul Fluminense</a>
+                        <a href="?region=petropolis" class="dd-petropolis">Petropolitana</a>
+                        <a href="article.html" class="read-more-btn">Ler mais</a>
+                        <a href="?region=sp" class="dd-sp">São Paulo</a>
+                    </div>
+                </div>
+
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="category.html" id="menu-region">Rio de Janeiro</a></li>
+                        <li><a href="sections.html">Editorias</a></li>
+                        <li><a href="columnists.html">Colunistas</a></li>
+                        <li><a href="regions.html">Região</a></li>
+                        <li><a href="#">Nossos Correios</a></li>
+                        <li><a href="#">Especiais</a></li>
+                    </ul>
+                </nav>
+
+                <div class="search-icon">
+                    <i class="fas fa-search"></i> Buscar notícias...
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+
+        <!-- Breadcrumb & Title -->
+        <div style="margin-bottom: 20px;">
+            <span style="font-size: 0.9rem; color: #666;">Início > Editoriais > <strong>Política</strong></span>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                <h1 style="font-size: 3rem; margin: 0;">Política</h1>
+                <div class="share-icons" style="color: #888;">
+                    Compartilhar:
+                    <i class="fab fa-facebook-f" style="margin: 0 5px;"></i>
+                    <i class="fab fa-twitter" style="margin: 0 5px;"></i>
+                    <i class="fab fa-whatsapp" style="margin: 0 5px;"></i>
+                </div>
+            </div>
+            <p style="color: #666;">Últimas notícias sobre política</p>
+        </div>
+
+        <div class="content-grid">
+            <!-- Main Column -->
+            <main>
+                <!-- Featured Hero Article -->
+                <article class="hero-card">
+                    <div style="position: relative;">
+                        <span class="tag" style="position: absolute; top: 10px; left: 10px;">Política</span>
+                        <!-- Placeholder Image -->
+                        <img src="https://placehold.co/800x450/333/fff?text=Noticia+Principal" alt="Destaque"
+                            class="hero-image">
+                    </div>
+                    <div class="hero-content">
+                        <h2>Barra Mansa: Manutenção Urbana realiza serviços de recomposição asfáltica no Centro</h2>
+                        <p class="date-meta">
+                            <span><i class="far fa-user"></i> Redação</span>
+                            <span><i class="far fa-clock"></i> 15/01/2026</span>
+                        </p>
+                        <p class="hero-excerpt">A Secretaria de Manutenção Urbana executou recomposição asfáltica na
+                            Avenida Domingos Mariano e vias adjacentes do Centro.</p>
+                    </div>
+                </article>
+
+                <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+                <!-- News Section -->
+                <section>
+                    <h3 class="section-title">Todas as Notícias</h3>
+                    <div class="news-grid">
+
+                        <!-- News Item 1 -->
+                        <article class="news-card">
+                            <span class="tag">Política</span>
+                            <img src="https://placehold.co/400x250/444/fff?text=Obras+no+Centro" alt="Thumb">
+                            <h3>Barra Mansa: Manutenção Urbana realiza serviços</h3>
+                            <p class="date-meta">15/01/2026</p>
+                            <p>A Secretaria de Manutenção Urbana executou recomposição...</p>
+                        </article>
+
+                        <!-- News Item 2 -->
+                        <article class="news-card">
+                            <a href="noticia.html">
+                                <span class="tag">Política</span>
+                                <img src="https://placehold.co/400x250/555/fff?text=Prefeitura+Resende" alt="Thumb">
+                                <h3>Prefeitura de Resende anuncia investimentos em infraestrutura</h3>
+                            </a>
+                            <p class="date-meta">15/01/2026</p>
+                            <p>Novo plano municipal prevê melhorias em pavimentação...</p>
+                        </article>
+
+                        <!-- News Item 3 -->
+                        <article class="news-card">
+                            <span class="tag">Política</span>
+                            <img src="https://placehold.co/400x250/666/fff?text=Camara+VR" alt="Thumb">
+                            <h3>Câmara Municipal de Volta Redonda aprova novo projeto</h3>
+                            <p class="date-meta">07/01/2026</p>
+                            <p>Projeto estabelece diretrizes para melhoria do transporte...</p>
+                        </article>
+
+                        <!-- News Item 4 -->
+                        <article class="news-card">
+                            <span class="tag">Política</span>
+                            <img src="https://placehold.co/400x250/777/fff?text=Governador" alt="Thumb">
+                            <h3>Governador anuncia novos investimentos para o Sul Fluminense</h3>
+                            <p class="date-meta">15/01/2026</p>
+                            <p>Pacote de medidas inclui obras de infraestrutura e saúde...</p>
+                        </article>
+
+                        <!-- News Item 5 -->
+                        <article class="news-card">
+                            <span class="tag">Política</span>
+                            <img src="https://placehold.co/400x250/888/fff?text=Assembleia" alt="Thumb">
+                            <h3>Assembleia discute reforma administrativa com participação</h3>
+                            <p class="date-meta">15/01/2026</p>
+                            <p>Audiência pública reúne representantes da sociedade civil...</p>
+                        </article>
+
+                        <!-- News Item 6 -->
+                        <article class="news-card">
+                            <span class="tag">Política</span>
+                            <img src="https://placehold.co/400x250/999/fff?text=Prefeitos" alt="Thumb">
+                            <h3>Prefeitos da região se reúnem para pactuar consórcio</h3>
+                            <p class="date-meta">15/01/2026</p>
+                            <p>Objetivo é ampliar o atendimento e otimizar recursos...</p>
+                        </article>
+
+                    </div>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button
+                            style="background: #333; color: #fff; border: 0; padding: 10px 20px; cursor: pointer;">Carregar
+                            mais</button>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="ad-space">
+                    ESPAÇO PUBLICITÁRIO - Banner 300x250
+                </div>
+
+                <div class="newsletter-widget">
+                    <h3>Newsletter</h3>
+                    <p>Receba as principais notícias direto no seu e-mail.</p>
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>Assinar Newsletter</button>
+                </div>
+
+                <div class="ad-space" style="height: 600px;">
+                    ESPAÇO PUBLICITÁRIO - Vertical
+                </div>
+            </aside>
+        </div>
+
+        <div class="ad-space" style="height: 100px; margin-bottom: 50px;">
+            ESPAÇO PUBLICITÁRIO - Banner Largo
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="site-brand" style="margin-bottom: 20px;">
+                        <h2 style="color: #fff;">Correio da Manhã</h2>
+                    </div>
+                    <p>Fundado em 1901, o Correio da Manhã é tradição no jornalismo brasileiro.</p>
+                    <br>
+                    <p><i class="far fa-envelope"></i> redacao@correiodamanha.com.br</p>
+                    <p><i class="fas fa-phone"></i> (21) 2221-2221</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Nossas Edições</h4>
+                    <ul>
+                        <li><a href="#">Sul Fluminense</a></li>
+                        <li><a href="#">Petropolitana</a></li>
+                        <li><a href="#">Serrana</a></li>
+                        <li><a href="#">São Paulo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Editorias</h4>
+                    <ul>
+                        <li><a href="#">Política</a></li>
+                        <li><a href="#">Economia</a></li>
+                        <li><a href="#">Rio de Janeiro</a></li>
+                        <li><a href="#">Esportes</a></li>
+                        <li><a href="#">Cultura</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Sobre o Correio</a></li>
+                        <li><a href="#">Política Editorial</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="float: left;">
+                    <p>Siga o Correio da Manhã</p>
+                    <!-- Social icons would go here -->
+                </div>
+                <div style="float: right;">
+                    <p>© 2026 Correio da Manhã. Todos os direitos reservados.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícia - Correio da Manhã</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-calendar-alt"></i> Segunda-feira, 8 de setembro de 2025</span>
+                <span id="top-city"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro | 34°C Parcialmente
+                    nublado</span>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="fas fa-dollar-sign"></i> USD: R$ 5,34 <span style="color: #ffcccc;">-0.01%</span></span>
+                <span>Edição Digital</span>
+                <span>Newsletter</span>
+                <span>Assine</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="site-brand">
+                    <h1><a href="index.html">Correio da Manhã</a></h1>
+                </div>
+
+                <!-- Region Selector -->
+                <div class="header-context-pill pill-rio" id="regionPill">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Rio de Janeiro</strong>
+                    <i class="fas fa-chevron-down"></i>
+
+                    <div class="region-dropdown-menu">
+                        <a href="?region=rio" class="dd-rio">Rio de Janeiro</a>
+                        <a href="?region=sul" class="dd-sul">Sul Fluminense</a>
+                        <a href="?region=petropolis" class="dd-petropolis">Petropolitana</a>
+                        <a href="?region=sp" class="dd-sp">Estado de São Paulo</a>
+                    </div>
+                </div>
+
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="category.html" id="menu-region">Rio de Janeiro</a></li>
+                        <li><a href="sections.html">Editorias</a></li>
+                        <li><a href="columnists.html">Colunistas</a></li>
+                        <li><a href="regions.html">Região</a></li>
+                        <li><a href="#">Nossos Correios</a></li>
+                        <li><a href="#">Especiais</a></li>
+                    </ul>
+                </nav>
+
+                <div class="search-icon">
+                    <i class="fas fa-search"></i> Buscar notícias...
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+
+        <!-- Breadcrumb -->
+        <div style="margin-bottom: 20px; font-size: 0.9rem; color: #666;">
+            <a href="index.html">Início</a> > <a href="editoria.html">Editorias</a> > <a
+                href="editoria.html">Política</a> > <strong>Barra Mansa...</strong>
+        </div>
+
+        <div class="content-grid">
+            <!-- Main Column (Article) -->
+            <main class="article-container">
+
+                <!-- Tags -->
+                <div class="article-tags">
+                    <span class="tag-pill">Política</span>
+                    <span class="tag-pill" style="background: #eee; color: #333;">Barra Mansa</span>
+                    <span class="tag-pill" style="background: #eee; color: #333;">Infraestrutura</span>
+                </div>
+
+                <h1 class="article-title">Barra Mansa: Manutenção Urbana realiza serviços de recomposição asfáltica no
+                    Centro</h1>
+                <p class="article-subtitle">Secretaria Municipal executa obras de infraestrutura em vias principais para
+                    melhorar mobilidade urbana</p>
+
+                <div class="article-meta">
+                    <div class="author-date">
+                        <span><i class="far fa-user"></i> Por Redação Correio da Manhã</span>
+                        <span><i class="far fa-calendar"></i> 15 de janeiro de 2026 às 06:00</span>
+                    </div>
+                </div>
+
+                <div class="share-toolbar">
+                    <span>Compartilhar:</span>
+                    <a href="#" class="share-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-btn"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="share-btn"><i class="fas fa-link"></i></a>
+                </div>
+
+                <figure class="article-featured-image">
+                    <img src="https://placehold.co/800x500/333/fff?text=Trabalhadores+na+Obra" alt="Obra">
+                    <figcaption>Equipes da Secretaria de Manutenção Urbana trabalham na recomposição asfáltica da
+                        Avenida Domingos Mariano</figcaption>
+                </figure>
+
+                <div class="article-body">
+                    <p>A Secretaria de Manutenção Urbana de Barra Mansa executou nesta segunda-feira (15) serviços de
+                        recomposição asfáltica na Avenida Domingos Mariano e vias adjacentes do Centro da cidade. Os
+                        trabalhos fazem parte do cronograma de melhorias na infraestrutura urbana do município.</p>
+
+                    <p>Segundo o secretário municipal de Manutenção Urbana, <strong>João Silva</strong>, as obras visam
+                        melhorar as condições de trafegabilidade na região central, uma das mais movimentadas da cidade.
+                        "Estamos trabalhando para oferecer mais qualidade e segurança para motoristas e pedestres",
+                        destacou.</p>
+
+                    <h3>Cronograma de Obras</h3>
+                    <p>As intervenções seguem um cronograma estabelecido pela Prefeitura, que prevê a recuperação de
+                        aproximadamente <strong>15 quilômetros</strong> de vias urbanas ao longo de 2026. Entre as ruas
+                        contempladas estão:</p>
+
+                    <ul>
+                        <li>Avenida Domingos Mariano (trecho central)</li>
+                        <li>Rua Joaquim Leite (próximo ao mercado municipal)</li>
+                        <li>Avenida Amaral Peixoto (entrada da cidade)</li>
+                        <li>Rua Prefeito João Carlos (bairro Centro)</li>
+                    </ul>
+
+                    <p>O investimento total para o programa de recomposição asfáltica é de <strong>R$ 2,8
+                            milhões</strong>, recursos provenientes do orçamento municipal e de emendas parlamentares
+                        estaduais.</p>
+
+                    <h3>Benefícios para a População</h3>
+                    <p>A moradora do Centro, <strong>Maria Santos</strong>, de 54 anos, comemorou o início das obras.
+                        "Já estava na hora de arrumar essas ruas. O asfalto estava muito deteriorado, principalmente
+                        aqui na Domingos Mariano", disse.</p>
+
+                    <p>As melhorias na infraestrutura viária também devem impactar positivamente o comércio local,
+                        facilitando o acesso de clientes e fornecedores às lojas e estabelecimentos da região central.
+                    </p>
+                </div>
+
+                <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+                <div class="article-footer-share"
+                    style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 0.8rem; color: #666;">Última atualização: 15 de janeiro de 2026 às
+                        11:30</span>
+                    <div class="share-toolbar">
+                        <a href="#" class="share-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="ad-space">
+                    ESPAÇO PUBLICITÁRIO - Banner 300x250
+                </div>
+
+                <!-- Related News Widget -->
+                <div class="related-news-widget">
+                    <h3 class="widget-title">Matérias Relacionadas</h3>
+
+                    <div class="related-item">
+                        <span class="tag-mini">Política</span>
+                        <img src="https://placehold.co/300x150/444/fff?text=VR+Investe" alt="Relacionada">
+                        <h4>Volta Redonda investe em melhorias na infraestrutura viária</h4>
+                        <p class="meta">14/01/2026</p>
+                    </div>
+
+                    <div class="related-item">
+                        <span class="tag-mini">Política</span>
+                        <img src="https://placehold.co/300x150/555/fff?text=Resende" alt="Relacionada">
+                        <h4>Resende anuncia novo plano de mobilidade urbana</h4>
+                        <p class="meta">13/01/2026</p>
+                    </div>
+
+                    <div class="related-item">
+                        <span class="tag-mini">Política</span>
+                        <img src="https://placehold.co/300x150/666/fff?text=Investimento" alt="Relacionada">
+                        <h4>Sul Fluminense recebe investimentos em infraestrutura</h4>
+                        <p class="meta">12/01/2026</p>
+                    </div>
+                </div>
+
+                <div class="newsletter-widget" style="background-color: var(--primary-color);">
+                    <h3>Newsletter</h3>
+                    <p>Cadastre-se para receber as principais notícias do Sul Fluminense.</p>
+                    <input type="email" placeholder="Seu e-mail"
+                        style="background: rgba(255,255,255,0.2); color: #fff;">
+                    <button style="background: #fff; color: var(--primary-color);">Inscrever-se</button>
+                </div>
+
+            </aside>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="site-brand" style="margin-bottom: 20px;">
+                        <h2 style="color: #fff;">Correio da Manhã</h2>
+                    </div>
+                    <p>Fundado em 1901, o Correio da Manhã é tradição no jornalismo brasileiro.</p>
+                    <br>
+                    <p><i class="far fa-envelope"></i> redacao@correiodamanha.com.br</p>
+                    <p><i class="fas fa-phone"></i> (21) 2221-2221</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Nossas Edições</h4>
+                    <ul>
+                        <li><a href="#">Sul Fluminense</a></li>
+                        <li><a href="#">Petropolitana</a></li>
+                        <li><a href="#">Estado de São Paulo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Editorias</h4>
+                    <ul>
+                        <li><a href="editoria.html">Política</a></li>
+                        <li><a href="#">Economia</a></li>
+                        <li><a href="#">Rio de Janeiro</a></li>
+                        <li><a href="#">Esportes</a></li>
+                        <li><a href="#">Cultura</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Sobre o Correio</a></li>
+                        <li><a href="#">Política Editorial</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div style="float: left;">
+                    <p>Siga o Correio da Manhã</p>
+                    <!-- Social icons would go here -->
+                </div>
+                <div style="float: right;">
+                    <p>© 2026 Correio da Manhã. Todos os direitos reservados.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

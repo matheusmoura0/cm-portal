@@ -31,11 +31,45 @@
                         <h1>Correio da Manhã</h1>
                     </a>
                     <div class="region-selector">
-                        <div class="region-pill"><span>Selecione a Região</span> ▾</div>
+                        <div class="region-pill" style="background-color: #D32F2F;">
+                            <span id="current-region">Rio de Janeiro</span> ▾
+                        </div>
+
                         <ul class="region-dropdown">
-                            <li><a href="#">Rio de Janeiro</a></li>
-                            <li><a href="#">São Paulo</a></li>
-                            <li><a href="#">Distrito Federal</a></li>
+                            <li>
+                                <a href="#" data-color="#D32F2F" data-name="Rio de Janeiro">
+                                    <span class="dot" style="background-color: #D32F2F;"></span>
+                                    Rio de Janeiro
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-color="#333333" data-name="São Paulo">
+                                    <span class="dot" style="background-color: #333333;"></span>
+                                    São Paulo
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-color="#2E7D32" data-name="Distrito Federal">
+                                    <span class="dot" style="background-color: #2E7D32;"></span>
+                                    Distrito Federal
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-color="#E65100" data-name="Sul Fluminense">
+                                    <span class="dot" style="background-color: #E65100;"></span>
+                                    Sul Fluminense
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-color="#880E4F" data-name="Petrópolis">
+                                    <span class="dot" style="background-color: #880E4F;"></span>
+                                    Petrópolis
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

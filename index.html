@@ -19,7 +19,7 @@
                     <span>💲 COTAÇÃO: R$ 0,00</span>
                 </div>
                 <div class="top-links">
-                    <a href="#">Assine</a> | <a href="#">Newsletter</a> | <a href="#">Login</a>
+                    <a href="#">Assine</a> | <a href="#">Newsletter</a>ß
                 </div>
             </div>
         </div>
@@ -133,35 +133,78 @@
             PUBLICIDADE 728x90 (HEADER/MEIO)
         </div>
 
-        <section class="columnists-bg">
+        <section class="columnists-bg"
+            style="padding: 40px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
             <div class="container">
-                <h2 class="section-title" style="border:none; margin-bottom:30px;">Colunistas em Destaque</h2>
-                <div class="grid col-grid">
-                    <div class="col-card">
-                        <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
-                        <div>
-                            <span class="col-role">POLÍTICA</span>
-                            <h4>Nome do Colunista</h4>
-                            <p class="col-title"><a href="#">Título da Coluna de Opinião sobre o Cenário Atual</a></p>
-                        </div>
-                    </div>
-                    <div class="col-card">
-                        <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
-                        <div>
-                            <span class="col-role">ECONOMIA</span>
-                            <h4>Nome do Colunista</h4>
-                            <p class="col-title"><a href="#">Análise sobre o Mercado Financeiro e o Dólar</a></p>
-                        </div>
-                    </div>
-                    <div class="col-card">
-                        <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
-                        <div>
-                            <span class="col-role">ESPORTE</span>
-                            <h4>Nome do Colunista</h4>
-                            <p class="col-title"><a href="#">Comentários sobre a Rodada do Campeonato</a></p>
-                        </div>
+                <div class="carousel-section-header">
+                    <h2 class="section-title" style="border:none; margin-bottom:0;">Colunistas em Destaque</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" id="colPrev">❮</button>
+                        <button class="carousel-btn next" id="colNext">❯</button>
                     </div>
                 </div>
+
+                <div class="col-carousel-wrapper">
+                    <div class="col-carousel-track" id="colTrack">
+                        <!-- Card 1 (Existente) -->
+                        <div class="col-card">
+                            <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
+                            <div>
+                                <span class="col-role">POLÍTICA</span>
+                                <h4>Nome do Colunista</h4>
+                                <p class="col-title"><a href="#">Título da Coluna de Opinião sobre o Cenário Atual</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 (Existente) -->
+                        <div class="col-card">
+                            <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
+                            <div>
+                                <span class="col-role">ECONOMIA</span>
+                                <h4>Nome do Colunista</h4>
+                                <p class="col-title"><a href="#">Análise sobre o Mercado Financeiro e o Dólar</a></p>
+                            </div>
+                        </div>
+                        <!-- Card 3 (Existente) -->
+                        <div class="col-card">
+                            <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
+                            <div>
+                                <span class="col-role">ESPORTE</span>
+                                <h4>Nome do Colunista</h4>
+                                <p class="col-title"><a href="#">Comentários sobre a Rodada do Campeonato</a></p>
+                            </div>
+                        </div>
+                        <!-- Card 4 (Novo) -->
+                        <div class="col-card">
+                            <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
+                            <div>
+                                <span class="col-role">CULTURA</span>
+                                <h4>Nome do Colunista</h4>
+                                <p class="col-title"><a href="#">A ascensão do cinema nacional nos festivais</a></p>
+                            </div>
+                        </div>
+                        <!-- Card 5 (Novo) -->
+                        <div class="col-card">
+                            <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
+                            <div>
+                                <span class="col-role">TECNOLOGIA</span>
+                                <h4>Nome do Colunista</h4>
+                                <p class="col-title"><a href="#">O impacto da IA no mercado de trabalho</a></p>
+                            </div>
+                        </div>
+                        <!-- Card 6 (Novo) -->
+                        <div class="col-card">
+                            <div class="col-avatar"><img src="https://placehold.co/100x100?text=FOTO" alt="User"></div>
+                            <div>
+                                <span class="col-role">SAÚDE</span>
+                                <h4>Nome do Colunista</h4>
+                                <p class="col-title"><a href="#">Dicas para manter a saúde mental em dia</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
 
@@ -191,6 +234,32 @@
                         style="width:100%; border-radius:4px; margin-bottom:10px;">
                     <span class="tag-static">MUNDO</span>
                     <h4><a href="materia.html">Acontecimentos internacionais repercutem no Brasil</a></h4>
+                </article>
+
+                <!-- Segunda Linha -->
+                <article>
+                    <img src="https://placehold.co/400x250/EEE/31343C?text=Foto"
+                        style="width:100%; border-radius:4px; margin-bottom:10px;">
+                    <span class="tag-static">ESPORTE</span>
+                    <h4><a href="materia.html">Nova contratação do time local agita a torcida</a></h4>
+                </article>
+                <article>
+                    <img src="https://placehold.co/400x250/EEE/31343C?text=Foto"
+                        style="width:100%; border-radius:4px; margin-bottom:10px;">
+                    <span class="tag-static">CULTURA</span>
+                    <h4><a href="materia.html">Exposição de arte moderna estreia no centro da cidade</a></h4>
+                </article>
+                <article>
+                    <img src="https://placehold.co/400x250/EEE/31343C?text=Foto"
+                        style="width:100%; border-radius:4px; margin-bottom:10px;">
+                    <span class="tag-static">TECNOLOGIA</span>
+                    <h4><a href="materia.html">Inovação tecnológica promete mudar o mercado local</a></h4>
+                </article>
+                <article>
+                    <img src="https://placehold.co/400x250/EEE/31343C?text=Foto"
+                        style="width:100%; border-radius:4px; margin-bottom:10px;">
+                    <span class="tag-static">SAÚDE</span>
+                    <h4><a href="materia.html">Campanha de vacinação atinge meta histórica</a></h4>
                 </article>
             </div>
         </section>

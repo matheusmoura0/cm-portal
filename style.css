@@ -280,21 +280,73 @@ ul {
     margin-bottom: 30px;
 }
 
-/* --- COLUNISTAS --- */
+/* --- COLUNISTAS CAROUSEL --- */
 .columnists-bg {
     background-color: #f9f9f9;
-    padding: 40px 0;
-    margin: 40px 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
 }
 
-.col-grid {
-    grid-template-columns: repeat(3, 1fr);
+.carousel-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.carousel-btn:hover {
+    background: var(--cm-red);
+    color: #fff;
+    border-color: var(--cm-red);
+}
+
+.col-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    /* Oculta a barra de rolagem mas permite JS scroll */
+}
+
+/* O container que rola */
+.col-carousel-track {
+    display: flex;
     gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px 20px 5px;
+    /* Espaço para sombra */
+    /* Esconder scrollbar nativa */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.col-carousel-track::-webkit-scrollbar {
+    display: none;
 }
 
 .col-card {
+    min-width: 320px;
+    /* Largura fixa para cada card */
+    max-width: 320px;
     background: #fff;
     padding: 20px;
     border-radius: 6px;

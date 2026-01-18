@@ -49,4 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
             regionDropdown.classList.remove('active');
         });
     });
+    // Lógica do Carousel de Colunistas
+    const colTrack = document.getElementById('colTrack');
+    const colPrev = document.getElementById('colPrev');
+    const colNext = document.getElementById('colNext');
+
+    if(colTrack && colPrev && colNext) {
+        colPrev.addEventListener('click', () => {
+            colTrack.scrollBy({
+                left: -340, // 320 card + 20 gap
+                behavior: 'smooth'
+            });
+        });
+
+        colNext.addEventListener('click', () => {
+            colTrack.scrollBy({
+                left: 340,
+                behavior: 'smooth'
+            });
+        });
+    }
+
 });

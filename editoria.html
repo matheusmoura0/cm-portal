@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editoria - Portal CM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="container flex flex-between">
+                <div class="top-info">
+                    <span>📅 DATA ATUAL</span>
+                    <span>☁️ CIDADE | 00°C</span>
+                    <span>💲 COTAÇÃO: R$ 0,00</span>
+                </div>
+                <div class="top-links">
+                    <a href="#">Assine</a> | <a href="#">Newsletter</a> | <a href="#">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container flex flex-between">
+                <div class="flex">
+                    <a href="index.html" class="logo">
+                        <h1>Correio da Manhã</h1>
+                    </a>
+                    <div class="region-selector">
+                        <div class="region-pill"><span>Selecione a Região</span> ▾</div>
+                        <ul class="region-dropdown">
+                            <li><a href="#">Rio de Janeiro</a></li>
+                            <li><a href="#">São Paulo</a></li>
+                            <li><a href="#">Distrito Federal</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="font-size:12px; color:#999; font-weight:bold;">BUSCA 🔍</div>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Capa</a></li>
+                    <li><a href="editoria.html">Política</a></li>
+                    <li><a href="editoria.html">Economia</a></li>
+                    <li><a href="editoria.html">Cultura</a></li>
+                    <li><a href="#">Esporte</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" style="margin-top: 30px;">
+        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 40px;">
+
+            <div>
+                <h1 class="section-title">Nome da Editoria (Ex: Política)</h1>
+
+                <article class="list-item">
+                    <a href="materia.html">
+                        <img src="https://placehold.co/400x250/EEE/31343C?text=FOTO+MATERIA" alt="News">
+                    </a>
+                    <div class="list-content">
+                        <span class="tag-static">CATEGORIA</span>
+                        <h3><a href="materia.html">Título da notícia na listagem de editoria ocupando espaço</a></h3>
+                        <p class="list-excerpt">Resumo da notícia (excerpt) com duas ou três linhas explicando do que se
+                            trata o assunto principal da matéria.</p>
+                        <small style="color:#999; font-size:11px;">Por Redação • 15/01/2026</small>
+                    </div>
+                </article>
+
+                <article class="list-item">
+                    <a href="materia.html">
+                        <img src="https://placehold.co/400x250/EEE/31343C?text=FOTO+MATERIA" alt="News">
+                    </a>
+                    <div class="list-content">
+                        <span class="tag-static">CATEGORIA</span>
+                        <h3><a href="materia.html">Outra notícia importante listada nesta categoria</a></h3>
+                        <p class="list-excerpt">Texto de apoio descrevendo o conteúdo da notícia de forma sucinta e
+                            direta para o leitor.</p>
+                        <small style="color:#999; font-size:11px;">Por Redação • 14/01/2026</small>
+                    </div>
+                </article>
+
+                <article class="list-item">
+                    <a href="materia.html">
+                        <img src="https://placehold.co/400x250/EEE/31343C?text=FOTO+MATERIA" alt="News">
+                    </a>
+                    <div class="list-content">
+                        <span class="tag-static">CATEGORIA</span>
+                        <h3><a href="materia.html">Terceira manchete de exemplo na página de arquivo</a></h3>
+                        <p class="list-excerpt">Descrição breve sobre o acontecimento relatado na matéria completa.</p>
+                        <small style="color:#999; font-size:11px;">Por Nome do Autor • 13/01/2026</small>
+                    </div>
+                </article>
+
+                <div style="text-align:center; margin-top:30px;">
+                    <button
+                        style="background:#111; color:#fff; padding:12px 30px; border:none; cursor:pointer; font-weight:bold; border-radius:4px;">CARREGAR
+                        MAIS NOTÍCIAS</button>
+                </div>
+            </div>
+
+            <aside>
+                <div class="ad-banner banner-sidebar">PUBLICIDADE</div>
+                <div class="newsletter-box">
+                    <h4>Newsletter</h4>
+                    <p style="font-size:12px; margin-bottom:10px;">Inscreva-se para receber atualizações diárias.</p>
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>ASSINAR</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container grid footer-grid">
+            <div class="footer-col">
+                <h2>CM</h2>
+                <p style="color:#aaa; font-size:12px; margin-top:10px;">Tradição e inovação no jornalismo brasileiro.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Nossas Edições</h4>
+                <ul>
+                    <li><a href="#">Rio de Janeiro</a></li>
+                    <li><a href="#">São Paulo</a></li>
+                    <li><a href="#">Distrito Federal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Editorias</h4>
+                <ul>
+                    <li><a href="editoria.html">Política</a></li>
+                    <li><a href="editoria.html">Economia</a></li>
+                    <li><a href="editoria.html">Esportes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Anuncie Conosco</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="text-align:center; margin-top:40px; border-top:1px solid #333; padding-top:20px; font-size:12px; color:#555;">
+            &copy; 2026 Correio da Manhã. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

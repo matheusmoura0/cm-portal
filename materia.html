@@ -4,166 +4,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matéria - Portal CM</title>
+    <title>Matéria - Correio da Manhã</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
     <header>
         <div class="top-bar">
-            <div class="container flex flex-between">
-                <div class="top-info">
-                    <span>📅 DATA ATUAL</span>
-                    <span>☁️ CIDADE | 00°C</span>
-                    <span>💲 COTAÇÃO: R$ 0,00</span>
+            <div class="container top-bar-content">
+                <div class="top-left">
+                    <span class="top-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span id="current-date-full">segunda-feira, 8 de setembro de 2025</span>
+                    </span>
+                    <span class="separator"></span>
+                    <span class="top-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                        <span id="weather-text">Rio de Janeiro: <strong>22°C</strong> Parcialmente nublado</span>
+                    </span>
                 </div>
-                <div class="top-links">
-                    <a href="#">Assine</a> | <a href="#">Newsletter</a> | <a href="#">Login</a>
+                <div class="top-center">
+                    <span class="separator">|</span>
+                    <span class="top-item">
+                        <strong>$ USD:</strong> R$ 5,04 <span class="trend-down">↘ 0%</span>
+                    </span>
+                    <span class="separator">|</span>
+                    <span class="top-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        <strong>IBOV:</strong> 134.874 <span class="trend-up">↗ 0.8%</span>
+                    </span>
+                </div>
+                <div class="top-right">
+                    <span class="separator">|</span>
+                    <div class="social-icons">
+                        <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
+                        <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg></a>
+                        <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg></a>
+                    </div>
+                    <span class="v-line"></span>
+                    <div class="top-text-links">
+                        <a href="#">Edição Digital</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Anuncie</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="main-header">
-            <div class="container flex flex-between">
-                <div class="flex">
+            <div class="container header-grid">
+                <div class="header-left-group">
                     <a href="index.html" class="logo">
                         <h1>Correio da Manhã</h1>
                     </a>
                     <div class="region-selector">
-                        <div class="region-pill" style="background-color: #D32F2F;">
-                            <span id="current-region">Rio de Janeiro</span> ▾
+                        <button id="region-btn" class="region-pill-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span id="current-region-text">Rio de Janeiro</span>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="region-dropdown" id="region-list">
+                            <ul>
+                                <li><a href="#" data-name="Rio de Janeiro" data-color="#D32F2F" data-temp="22°C">
+                                        <div class="icon-circle" style="background:#D32F2F"><svg width="12" height="12"
+                                                viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg></div>
+                                        <div><strong>Rio de Janeiro</strong><span class="sub-text">Edição Rio</span>
+                                        </div>
+                                    </a></li>
+                                <li><a href="#" data-name="Sul Fluminense" data-color="#2E7D32" data-temp="20°C">
+                                        <div class="icon-circle" style="background:#2E7D32"><svg width="12" height="12"
+                                                viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg></div>
+                                        <div><strong>Sul Fluminense</strong><span class="sub-text">Edição Sul
+                                                Flum.</span></div>
+                                    </a></li>
+                                <li><a href="#" data-name="Petropolitano" data-color="#8E24AA" data-temp="18°C">
+                                        <div class="icon-circle" style="background:#8E24AA"><svg width="12" height="12"
+                                                viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg></div>
+                                        <div><strong>Petropolitano</strong><span class="sub-text">Edição
+                                                Petrópolis</span></div>
+                                    </a></li>
+                                <li><a href="#" data-name="São Paulo" data-color="#1976D2" data-temp="19°C">
+                                        <div class="icon-circle" style="background:#1976D2"><svg width="12" height="12"
+                                                viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg></div>
+                                        <div><strong>São Paulo</strong><span class="sub-text">Edição São Paulo</span>
+                                        </div>
+                                    </a></li>
+                                <li><a href="#" data-name="Distrito Federal" data-color="#0288D1" data-temp="24°C">
+                                        <div class="icon-circle" style="background:#0288D1"><svg width="12" height="12"
+                                                viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg></div>
+                                        <div><strong>Distrito Federal</strong><span class="sub-text">Edição DF</span>
+                                        </div>
+                                    </a></li>
+                            </ul>
                         </div>
-
-                        <ul class="region-dropdown">
-                            <li>
-                                <a href="#" data-color="#D32F2F" data-name="Rio de Janeiro">
-                                    <span class="dot" style="background-color: #D32F2F;"></span>
-                                    Rio de Janeiro
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" data-color="#333333" data-name="São Paulo">
-                                    <span class="dot" style="background-color: #333333;"></span>
-                                    São Paulo
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" data-color="#2E7D32" data-name="Distrito Federal">
-                                    <span class="dot" style="background-color: #2E7D32;"></span>
-                                    Distrito Federal
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" data-color="#E65100" data-name="Sul Fluminense">
-                                    <span class="dot" style="background-color: #E65100;"></span>
-                                    Sul Fluminense
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" data-color="#880E4F" data-name="Petrópolis">
-                                    <span class="dot" style="background-color: #880E4F;"></span>
-                                    Petrópolis
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-                <div style="font-size:12px; color:#999; font-weight:bold;">BUSCA 🔍</div>
+                <div class="header-search">
+                    <span class="search-text">Buscar notícias...</span>
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
             </div>
         </div>
 
         <nav class="nav-bar">
             <div class="container">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Capa</a></li>
-                    <li><a href="editoria.html">Política</a></li>
-                    <li><a href="editoria.html">Economia</a></li>
-                    <li><a href="editoria.html">Cultura</a></li>
-                    <li><a href="#">Esporte</a></li>
+                    <li><a href="editoria.html">Rio de Janeiro <span class="arrow-down">⌄</span></a></li>
+                    <li><a href="editoria.html">Editorias <span class="arrow-down">⌄</span></a></li>
+                    <li><a href="#">Nossos Correios <span class="arrow-down">⌄</span></a></li>
+                    <li><a href="editoria.html">Especiais <span class="arrow-down">⌄</span></a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main class="container" style="margin-top: 30px;">
-        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 40px;">
+    <main class="container">
+        <div class="breadcrumb"><a href="index.html">Início</a> <span>›</span> <a href="editoria.html">Editorias</a>
+            <span>›</span> <a href="editoria.html">Política</a>
+            <span>›</span> <strong>Barra Mansa: Manutenção Urbana realiza serviços de recomposição asfáltica no
+                Centro</strong>
+        </div>
 
-            <article>
-                <div style="font-size:12px; color:#999; margin-bottom:15px; text-transform:uppercase;">
-                    <a href="index.html">Home</a> > <a href="editoria.html">Editoria</a> > Título da Matéria
-                </div>
-
-                <span class="tag-static" style="font-size:12px; padding:5px 10px;">EDITORIA PRINCIPAL</span>
+        <div class="layout-grid">
+            <!-- Main Content Area -->
+            <article class="article-content-wrapper">
 
                 <header class="article-header">
-                    <h1>Título da Matéria Grande e Impactante Ocupando Duas ou Três Linhas</h1>
-                    <p class="summary" style="font-size:20px; color:#555; margin-top:10px;">Subtítulo ou linha fina da
-                        matéria explicando o contexto da notícia em poucas palavras para o leitor.</p>
+                    <div class="article-tags-row">
+                        <a href="editoria.html" class="tag-pill red">POLÍTICA</a>
+                        <a href="editoria.html" class="tag-pill">Barra Mansa</a>
+                        <a href="editoria.html" class="tag-pill">Infraestrutura</a>
+                    </div>
+
+                    <h1 class="article-title">Barra Mansa: Manutenção Urbana realiza serviços de recomposição asfáltica
+                        no Centro</h1>
+                    <p class="article-lead">Secretaria Municipal executa obras de infraestrutura em vias principais para
+                        melhorar mobilidade urbana</p>
+
+                    <div class="article-meta">
+                        <span class="meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg> Por Redação Correio da Manhã</span>
+                        <span class="meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg> 15 de janeiro de 2025 às 06:00</span>
+                        <span class="meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg> 3 min de leitura</span>
+                        <span class="meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg> 1.247 visualizações</span>
+                    </div>
+
+                    <div class="share-buttons-row">
+                        <span class="share-label">Compartilhar:</span>
+                        <a href="#" class="share-btn-square"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
+                        <a href="#" class="share-btn-square"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                            </svg></a>
+                        <a href="#" class="share-btn-square"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13"></path>
+                                <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                            </svg></a>
+                        <a href="#" class="share-btn-square"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg></a>
+                    </div>
                 </header>
 
-                <div class="article-meta">
-                    <span>👤 <strong>Por Nome do Repórter</strong></span>
-                    <span>📅 01 de Janeiro de 2026 às 14:00</span>
-                </div>
-
-                <figure style="margin-bottom:30px;">
-                    <img src="https://placehold.co/800x450/EEE/31343C?text=FOTO+PRINCIPAL+DA+MATERIA"
-                        alt="Foto Principal" style="width:100%; border-radius:4px;">
-                    <figcaption style="font-size:12px; color:#777; margin-top:5px; font-style:italic;">Legenda da foto
-                        descrevendo a imagem.</figcaption>
+                <figure class="article-featured-image">
+                    <img src="https://placehold.co/800x450/EEE/333?text=OBRAS+NO+CENTRO"
+                        alt="Homens trabalhando na via">
+                    <figcaption>Equipes da Secretaria de Manutenção Urbana trabalham na recomposição asfáltica da
+                        Avenida Domingos Mariano</figcaption>
                 </figure>
 
                 <div class="article-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod
-                        semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit
-                        amet fermentum.</p>
-                    <p>Donec id elit non mi porta gravida at eget metus. <strong>Aenean lacinia bibendum nulla sed
-                            consectetur.</strong> Maecenas sed diam eget risus varius blandit sit amet non magna.
-                        Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                    <p>A Secretaria de Manutenção Urbana de Barra Mansa executou nesta segunda-feira (15) serviços de
+                        recomposição asfáltica na Avenida Domingos Mariano e vias adjacentes do Centro da cidade. Os
+                        trabalhos fazem parte do cronograma de melhorias na infraestrutura urbana do município.</p>
 
-                    <h3>Subtítulo Interno da Matéria</h3>
-                    <p>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Vivamus
-                        sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo
-                        luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                    <p>Segundo o secretário municipal de Manutenção Urbana, <strong>João Silva</strong>, as obras visam
+                        melhorar as condições de trafegabilidade na região central, uma das mais movimentadas da cidade.
+                        "Estamos trabalhando para oferecer mais qualidade e segurança para motoristas e pedestres",
+                        destacou.</p>
+
+                    <h2>Cronograma de Obras</h2>
+                    <p>As intervenções seguem um cronograma estabelecido pela Prefeitura, que prevê a recuperação de
+                        aproximadamente <strong>15 quilômetros</strong> de vias urbanas ao longo de 2025. Entre as ruas
+                        contempladas estão:</p>
                     <ul>
-                        <li>Ponto importante número um.</li>
-                        <li>Ponto importante número dois detalhado.</li>
-                        <li>Conclusão do tópico abordado.</li>
+                        <li>Avenida Domingos Mariano (trecho central)</li>
+                        <li>Rua Joaquim Leite (próximo ao mercado municipal)</li>
+                        <li>Avenida Amaral Peixoto (entrada da cidade)</li>
+                        <li>Rua Prefeito João Carlos (bairro Centro)</li>
                     </ul>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est
-                        at lobortis. Donec sed odio dui.</p>
-                </div>
-            </article>
+                    <p>O investimento total para o programa de recomposição asfáltica é de <strong>R$ 2,8
+                            milhões</strong>, recursos provenientes do orçamento municipal e de emendas parlamentares
+                        estaduais.</p>
 
-            <aside>
-                <div class="ad-banner banner-sidebar">PUBLICIDADE LATERAL</div>
-
-                <div class="newsletter-box">
-                    <h4 style="margin-bottom:10px; font-size:18px;">Receba nossas notícias</h4>
-                    <p style="font-size:13px; margin-bottom:15px; opacity:0.9;">Cadastre-se e fique por dentro de tudo.
+                    <h2>Benefícios para a População</h2>
+                    <p>A moradora do Centro, <strong>Maria Santos</strong>, de 54 anos, comemorou o início das obras.
+                        "Já estava na hora de arrumar essas ruas. O asfalto estava muito deteriorado, principalmente
+                        aqui na Domingos Mariano", disse.</p>
+                    <p>As melhorias na infraestrutura viária também devem impactar positivamente o comércio local,
+                        facilitando o acesso de clientes e fornecedores às lojas e estabelecimentos da região central.
                     </p>
-                    <input type="email" placeholder="Seu melhor e-mail">
-                    <button>CADASTRAR</button>
-                </div>
 
-                <h3 class="section-title" style="font-size:18px;">Leia Também</h3>
-                <div class="side-item">
-                    <img src="https://placehold.co/150x150/EEE/31343C?text=Thumb" alt="Thumb">
-                    <div>
-                        <span class="tag-static">RELACIONADA</span>
-                        <h4><a href="#">Título de uma matéria relacionada ao assunto</a></h4>
+                    <h2>Próximas Etapas</h2>
+                    <p>Após a conclusão dos trabalhos no Centro, as equipes da Secretaria de Manutenção Urbana seguirão
+                        para outros bairros da cidade. A previsão é que até o final de março sejam contemplados os
+                        bairros Ano Bom, Boa Sorte e Vila Independência.</p>
+                    <p>A Prefeitura orienta que os motoristas redobrem a atenção ao trafegar pelas vias em obras e
+                        respeitem a sinalização temporária instalada no local.</p>
+                    <p><em>Com informações da Secretaria Municipal de Manutenção Urbana</em></p>
+
+                    <div class="update-time">
+                        <div class="share-buttons-row"
+                            style="margin-top:20px; border-top:none; margin-bottom:0; justify-content:flex-end;">
+                            <a href="#" class="share-btn-square">f</a><a href="#" class="share-btn-square">x</a><a
+                                href="#" class="share-btn-square">w</a><a href="#" class="share-btn-square">s</a>
+                        </div>
+                        Última atualização: 15 de janeiro de 2025 às 11:30
                     </div>
                 </div>
-                <div class="side-item">
-                    <img src="https://placehold.co/150x150/EEE/31343C?text=Thumb" alt="Thumb">
-                    <div>
-                        <span class="tag-static">MAIS LIDA</span>
-                        <h4><a href="#">Outra matéria que está sendo muito lida agora</a></h4>
+
+                <!-- Read Next Section -->
+                <div class="read-next-block" style="margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
+                    <h3 style="font-family:var(--font-serif); font-size:20px; font-weight:700; margin-bottom:15px;">Leia
+                        a seguir</h3>
+                    <a href="materia.html" style="text-decoration:none; display:flex; gap:15px; align-items:center;">
+                        <img src="https://placehold.co/150x100/EEE/333?text=LEIA+MAIS" style="border-radius:4px;">
+                        <div>
+                            <span
+                                style="font-size:11px; color:var(--cm-red); font-weight:700; text-transform:uppercase;">CIDADES</span>
+                            <h4
+                                style="font-family:var(--font-serif); font-size:16px; color:#111; margin:5px 0 0 0; line-height:1.3;">
+                                Prefeitura de Volta Redonda inaugura nova creche no bairro Retiro</h4>
+                        </div>
+                    </a>
+                </div>
+
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="sidebar-column">
+                <div class="ad-banner-box"
+                    style="height:250px; background:#f9f9f9; display:flex; align-items:center; justify-content:center; border:1px dashed #ccc; margin-bottom:40px;">
+                    <span style="font-size:10px; color:#999;">ESPAÇO PUBLICITÁRIO - Banner 300x250</span>
+                </div>
+
+                <div class="related-news-widget">
+                    <h3>Matérias Relacionadas</h3>
+
+                    <a href="materia.html" class="related-item">
+                        <div class="img-wrap">
+                            <span class="tag">POLÍTICA</span>
+                            <img src="https://placehold.co/300x169/EEE/333?text=INFRAESTRUTURA" alt="News Image">
+                        </div>
+                        <h4>Volta Redonda investe em melhorias na infraestrutura viária</h4>
+                        <p>Município anuncia pacote de obras para recuperação de ruas e avenidas.</p>
+                        <span class="meta">A. Redação • 14/01/2025</span>
+                    </a>
+
+                    <a href="materia.html" class="related-item">
+                        <div class="img-wrap">
+                            <span class="tag">POLÍTICA</span>
+                            <img src="https://placehold.co/300x169/EEE/333?text=MOBILIDADE" alt="News Image">
+                        </div>
+                        <h4>Resende anuncia novo plano de mobilidade urbana</h4>
+                        <p>Projeto prevê criação de ciclovias e melhoria no transporte público.</p>
+                        <span class="meta">A. João Santos • 13/01/2025</span>
+                    </a>
+
+                    <a href="materia.html" class="related-item">
+                        <div class="img-wrap">
+                            <span class="tag">POLÍTICA</span>
+                            <img src="https://placehold.co/300x169/EEE/333?text=SUL+FLUMINENSE" alt="News Image">
+                        </div>
+                        <h4>Sul Fluminense recebe investimentos em infraestrutura</h4>
+                        <p>Governo estadual destina recursos para obras na região.</p>
+                        <span class="meta">A. Maria Silva • 12/01/2025</span>
+                    </a>
+                </div>
+
+                <div class="newsletter-widget-red" style="margin-top:40px;">
+                    <h4>Newsletter</h4>
+                    <p>Cadastre-se para receber as principais notícias do Sul Fluminense.</p>
+                    <div class="news-input-group">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button>Inscrever-se</button>
                     </div>
                 </div>
             </aside>
@@ -171,42 +381,81 @@
     </main>
 
     <footer>
-        <div class="container grid footer-grid">
-            <div class="footer-col">
-                <h2>CM</h2>
-                <p style="color:#aaa; font-size:12px; margin-top:10px;">Tradição e inovação no jornalismo brasileiro.
-                </p>
+        <div class="container footer-main">
+            <div class="footer-col brand-col">
+                <h2 class="footer-logo">Correio da Manhã</h2>
+                <p class="brand-desc">Fundado em 1901, o Correio da Manhã é tradição no jornalismo brasileiro, levando
+                    informação de qualidade há mais de um século.</p>
+                <div class="contact-info">
+                    <p><span class="icon">✉</span> redacao@correiodamanha.com.br</p>
+                    <p><span class="icon">📞</span> (21) 3421-7000</p>
+                    <p><span class="icon">📍</span> Rio de Janeiro, RJ</p>
+                </div>
             </div>
+
             <div class="footer-col">
                 <h4>Nossas Edições</h4>
                 <ul>
-                    <li><a href="#">Rio de Janeiro</a></li>
+                    <li><a href="#">Sul Fluminense</a></li>
+                    <li><a href="#">Petropolitano</a></li>
+                    <li><a href="#">Serrano</a></li>
                     <li><a href="#">São Paulo</a></li>
                     <li><a href="#">Distrito Federal</a></li>
+                    <li><a href="#">Brasilianas</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4>Editorias</h4>
                 <ul>
-                    <li><a href="editoria.html">Política</a></li>
-                    <li><a href="editoria.html">Economia</a></li>
-                    <li><a href="editoria.html">Esportes</a></li>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Rio de Janeiro</a></li>
+                    <li><a href="#">Esportes</a></li>
+                    <li><a href="#">Cultura</a></li>
+                    <li><a href="#">Mundo</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4>Institucional</h4>
                 <ul>
-                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Sobre o Correio</a></li>
+                    <li><a href="#">Política Editorial</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
                     <li><a href="#">Anuncie Conosco</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="text-align:center; margin-top:40px; border-top:1px solid #333; padding-top:20px; font-size:12px; color:#555;">
-            &copy; 2026 Correio da Manhã. Todos os direitos reservados.
+
+        <div class="container footer-bottom">
+            <div class="social-block">
+                <h4>Siga o Correio da Manhã</h4>
+                <div class="social-links">
+                    <a href="#">fb</a>
+                    <a href="#">tw</a>
+                    <a href="#">ig</a>
+                    <a href="#">yt</a>
+                </div>
+            </div>
+            <div class="newsletter-block">
+                <h4>Newsletter</h4>
+                <div class="news-input-group">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>Assinar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <div class="container">
+                <p>&copy; 2025 Correio da Manhã. Todos os direitos reservados. Fundado em 1901 - Tradição no jornalismo
+                    brasileiro.</p>
+            </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 

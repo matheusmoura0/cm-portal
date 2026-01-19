@@ -1,73 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Lógica do Dropdown de Regiões
-    const regionBtn = document.querySelector('.region-pill');
-    const regionDropdown = document.querySelector('.region-dropdown');
 
-    if(regionBtn && regionDropdown) {
+    // 1. DATA ATUAL
+    const dateElement = document.getElementById('current-date-full');
+    if (dateElement) {
+        const now = new Date();
+        const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        const dateString = now.toLocaleDateString('pt-BR', options);
+        dateElement.textContent = dateString.charAt(0).toUpperCase() + dateString.slice(1);
+    }
+
+    // 2. DROPDOWN DE REGIÃO
+    const regionBtn = document.getElementById('region-btn');
+    const regionList = document.getElementById('region-list');
+    const regionTextLabel = document.getElementById('current-region-text');
+    const weatherText = document.getElementById('weather-text');
+    const topBar = document.querySelector('.top-bar');
+
+    if (regionBtn && regionList) {
         regionBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Impede o clique de fechar imediatamente
-            regionDropdown.classList.toggle('active');
+            e.stopPropagation();
+            regionList.classList.toggle('active');
         });
 
-        // Fechar ao clicar em qualquer lugar fora
-        document.addEventListener('click', () => {
-            regionDropdown.classList.remove('active');
-        });
-    }
-
-    // (Opcional) Atualizar o texto do botão ao escolher uma região
-    const regionLinks = document.querySelectorAll('.region-dropdown a');
-    const regionLabel = document.querySelector('.region-pill span');
-    
-    regionLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            
-            // Atualiza Texto
-            if(regionLabel) {
-                regionLabel.textContent = e.currentTarget.textContent; // Pega o texto limpo, sem a bolinha se possível, mas aqui pega tudo. Ajustaremos se precisar.
-                // Mas o textContent do link inclui a bolinha (span), então vai ficar "• Rio de Janeiro". 
-                // O original tinha "Rio de Janeiro ▾". 
-                // O textContent do link é "\n                                    \n                                    Rio de Janeiro\n                                ".
-                // Vamos pegar apenas o texto do nó de texto, ignorando o span .dot
-                 const textNode = Array.from(e.currentTarget.childNodes).find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0);
-                 if(textNode) {
-                     regionLabel.textContent = textNode.textContent.trim();
-                 }
+        document.addEventListener('click', (e) => {
+            if (!regionList.contains(e.target) && !regionBtn.contains(e.target)) {
+                regionList.classList.remove('active');
             }
-
-            // Atualiza Cores
-            const color = e.currentTarget.getAttribute('data-color');
-            if(color) {
-                // Atualiza variável global
-                document.documentElement.style.setProperty('--cm-red', color);
-                // Atualiza cor do botão (caso tenha style inline)
-                if(regionBtn) regionBtn.style.backgroundColor = color;
-            }
-            
-            // Fecha dropdown
-            regionDropdown.classList.remove('active');
-        });
-    });
-    // Lógica do Carousel de Colunistas
-    const colTrack = document.getElementById('colTrack');
-    const colPrev = document.getElementById('colPrev');
-    const colNext = document.getElementById('colNext');
-
-    if(colTrack && colPrev && colNext) {
-        colPrev.addEventListener('click', () => {
-            colTrack.scrollBy({
-                left: -340, // 320 card + 20 gap
-                behavior: 'smooth'
-            });
         });
 
-        colNext.addEventListener('click', () => {
-            colTrack.scrollBy({
-                left: 340,
-                behavior: 'smooth'
+        const regionLinks = regionList.querySelectorAll('a');
+        regionLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const name = link.getAttribute('data-name');
+                const color = link.getAttribute('data-color');
+                const temp = link.getAttribute('data-temp');
+
+                if (regionTextLabel && name) regionTextLabel.textContent = name;
+                if (weatherText && temp && name) weatherText.innerHTML = `${name}: <strong>${temp}</strong> Parcialmente nublado`;
+
+                if (color) {
+                    document.documentElement.style.setProperty('--cm-red', color);
+                    if(topBar) topBar.style.backgroundColor = color;
+                    regionBtn.style.backgroundColor = color;
+                }
+                regionList.classList.remove('active');
             });
         });
     }
-
 });

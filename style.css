@@ -327,7 +327,23 @@ img {
     left: 0;
     background: white;
     min-width: 180px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+
+    #nav-region-dropdown {
+        background-color: var(--cm-red);
+        border: none;
+        padding: 10px 0;
+    }
+
+    #nav-region-dropdown li a {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    #nav-region-dropdown li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
     border-radius: 4px;
     padding: 10px 0;
     opacity: 0;

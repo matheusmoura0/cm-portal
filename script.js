@@ -40,9 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (weatherText && temp && name) weatherText.innerHTML = `${name}: <strong>${temp}</strong> Parcialmente nublado`;
 
                 if (color) {
-                    document.documentElement.style.setProperty('--cm-red', color);
-                    if(topBar) topBar.style.backgroundColor = color;
-                    regionBtn.style.backgroundColor = color;
+                    if (name === 'Sul Fluminense') {
+                        // Dropdown BLACK (from color param), Top bar RED
+                        document.documentElement.style.setProperty('--cm-red', color); 
+                        if(topBar) topBar.style.backgroundColor = '#D32F2F';
+                        regionBtn.style.backgroundColor = '#D32F2F';
+                    } else {
+                        document.documentElement.style.setProperty('--cm-red', color);
+                        if(topBar) topBar.style.backgroundColor = color;
+                        regionBtn.style.backgroundColor = color;
+                    }
                 }
 
                 // Update Nav Bar Region and Dropdown
@@ -51,15 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const subRegions = {
                     'Rio de Janeiro': ['Capital', 'Baixada Fluminense', 'Niterói e São Gonçalo', 'Interior'],
-                    'Sul Fluminense': ['Volta Redonda', 'Barra Mansa', 'Resende', 'Angra dos Reis'],
+                    'Sul Fluminense': ['Angra dos Reis', 'Barra do Piraí', 'Barra Mansa', 'Itatiaia', 'Paraty', 'Pinheiral', 'Piraí', 'Porto Real', 'Quatis', 'Volta Redonda', 'Resende', 'Rio Claro', 'Valença', 'Vassouras'],
                     'Petropolitano': ['Petrópolis', 'Teresópolis', 'Região Serrana'],
-                    'São Paulo': ['Capital', 'Região Metropolitana', 'Campinas', 'Interior'],
+                    'Estado de São Paulo': ['Estado de São Paulo', 'Região Metropolitana de São Paulo', 'Região Metropolitana de Campinas', 'Campinas', 'Interior de São Paulo'],
                     'Distrito Federal': ['Brasília', 'Taguatinga', 'Plano Piloto']
                 };
 
                 if (navRegionLink && name) {
                     // Update main link text, keeping the arrow
-                    navRegionLink.innerHTML = `${name} <span class="arrow-down">⌄</span>`;
+                    let displayNavName = name;
+                    if (name === 'Sul Fluminense') displayNavName = 'Região do Vale';
+                    
+                    navRegionLink.innerHTML = `${displayNavName} <span class="arrow-down">⌄</span>`;
                 }
 
                 if (navRegionDropdown && subRegions[name]) {

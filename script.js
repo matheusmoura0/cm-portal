@@ -44,6 +44,38 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(topBar) topBar.style.backgroundColor = color;
                     regionBtn.style.backgroundColor = color;
                 }
+
+                // Update Nav Bar Region and Dropdown
+                const navRegionLink = document.getElementById('nav-region-link');
+                const navRegionDropdown = document.getElementById('nav-region-dropdown');
+
+                const subRegions = {
+                    'Rio de Janeiro': ['Capital', 'Baixada Fluminense', 'Niterói e São Gonçalo', 'Interior'],
+                    'Sul Fluminense': ['Volta Redonda', 'Barra Mansa', 'Resende', 'Angra dos Reis'],
+                    'Petropolitano': ['Petrópolis', 'Teresópolis', 'Região Serrana'],
+                    'São Paulo': ['Capital', 'Região Metropolitana', 'Campinas', 'Interior'],
+                    'Distrito Federal': ['Brasília', 'Taguatinga', 'Plano Piloto']
+                };
+
+                if (navRegionLink && name) {
+                    // Update main link text, keeping the arrow
+                    navRegionLink.innerHTML = `${name} <span class="arrow-down">⌄</span>`;
+                }
+
+                if (navRegionDropdown && subRegions[name]) {
+                    // Clear existing items
+                    navRegionDropdown.innerHTML = '';
+                    // Add new items
+                    subRegions[name].forEach(sub => {
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = 'editoria.html';
+                        a.textContent = sub;
+                        li.appendChild(a);
+                        navRegionDropdown.appendChild(li);
+                    });
+                }
+
                 regionList.classList.remove('active');
             });
         });

@@ -1,5 +1,5 @@
 /* --- 1. FONTS & VARIABLES --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 :root {
     --cm-red: #D32F2F;
@@ -8,8 +8,8 @@
     --cm-border: #e0e0e0;
     --cm-text: #333;
     --cm-text-light: #666;
-    --font-sans: 'Inter', sans-serif;
-    --font-serif: 'Merriweather', serif;
+    --font-sans: 'Noto Sans', sans-serif;
+    --font-serif: 'Noto Serif', serif;
     --container-width: 1200px;
 }
 
@@ -221,7 +221,7 @@ img {
 .region-dropdown {
     display: none;
     position: absolute;
-    top: 130%;
+    top: 100%;
     left: 0;
     background: #fff;
     border: 1px solid #eee;
@@ -230,10 +230,36 @@ img {
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     padding: 5px 0;
+    margin-top: 10px;
 }
 
+/* Bridge to prevent menu closing when moving mouse from button to menu */
+.region-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: transparent;
+}
+
+.region-selector:hover .region-dropdown,
 .region-dropdown.active {
     display: block !important;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .region-dropdown ul li a {

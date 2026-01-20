@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Rio de Janeiro': ['Capital', 'Baixada Fluminense', 'Niterói e São Gonçalo', 'Interior'],
                     'Sul Fluminense': ['Angra dos Reis', 'Barra do Piraí', 'Barra Mansa', 'Itatiaia', 'Paraty', 'Pinheiral', 'Piraí', 'Porto Real', 'Quatis', 'Volta Redonda', 'Resende', 'Rio Claro', 'Valença', 'Vassouras'],
                     'Petropolitano': ['Petrópolis', 'Teresópolis', 'Região Serrana'],
-                    'Estado de São Paulo': ['Estado de São Paulo', 'Região Metropolitana de São Paulo', 'Região Metropolitana de Campinas', 'Campinas', 'Interior de São Paulo'],
+                    'São Paulo': ['Estado de São Paulo', 'Região Metropolitana de São Paulo', 'Região Metropolitana de Campinas', 'Campinas', 'Interior de São Paulo'],
                     'Distrito Federal': ['Brasília', 'Taguatinga', 'Plano Piloto']
                 };
 

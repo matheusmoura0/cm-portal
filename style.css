@@ -191,6 +191,38 @@ img {
     line-height: 1;
     margin: 0;
     letter-spacing: -0.5px;
+    transition: color 0.3s ease;
+}
+
+.logo.light-theme h1 {
+    color: #fff;
+}
+
+.header-subtitle {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+    padding-top: 3px;
+    text-align: right;
+    letter-spacing: 0.5px;
+}
+
+.header-search.light-theme {
+    color: #fff;
+}
+
+.header-search.light-theme .search-icon {
+    stroke: #fff;
+    opacity: 1;
+}
+
+.main-header {
+    transition: background-color 0.4s ease;
 }
 
 .region-selector {

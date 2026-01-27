@@ -87,11 +87,12 @@
             </div>
         </div>
 
-        <div class="main-header">
+        <div class="main-header" style="background-color: #D32F2F;">
             <div class="container header-grid">
                 <div class="header-left-group">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="logo light-theme">
                         <h1>Correio da Manhã</h1>
+                        <span class="header-subtitle" style="display:block;">PORTAL</span>
                     </a>
                     <div class="region-selector">
                         <button id="region-btn" class="region-pill-btn">
@@ -100,7 +101,7 @@
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
-                            <span id="current-region-text">Rio de Janeiro</span>
+                            <span id="current-region-text">Selecione a região</span>
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3">
                                 <polyline points="6 9 12 15 18 9"></polyline>
@@ -108,6 +109,14 @@
                         </button>
                         <div class="region-dropdown" id="region-list">
                             <ul>
+                                <li><a href="#" data-name="Selecione a região" data-color="#D32F2F" data-temp="--">
+                                        <div class="icon-circle" style="background:#D32F2F"><img
+                                                src="https://placehold.co/20x20/ffffff/000000?text=?"
+                                                style="width:12px; height:12px; object-fit:contain; opacity:0.8;"
+                                                alt="ico"></div>
+                                        <div><strong>Selecione a região</strong><span class="sub-text">Portal</span>
+                                        </div>
+                                    </a></li>
                                 <li><a href="#" data-name="Rio de Janeiro" data-color="#D32F2F" data-temp="22°C">
                                         <div class="icon-circle" style="background:#D32F2F"><img
                                                 src="https://placehold.co/20x20/ffffff/000000?text=?"
@@ -156,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="header-search">
+                <div class="header-search light-theme">
                     <span class="search-text">Buscar notícias...</span>
                     <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2">
@@ -366,8 +375,7 @@
                         </div>
                         <div class="box-list">
                             <article class="box-item">
-                                <a href="materia.html"
-                                    style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;">
+                                <a href="materia.html">
                                     <figure class="box-figure">
                                         <span class="editoria-tag">Política</span>
                                         <img src="https://placehold.co/800x500/EEE/333?text=POL" alt="img">
@@ -380,8 +388,7 @@
                                 </a>
                             </article>
                             <article class="box-item">
-                                <a href="materia.html"
-                                    style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;">
+                                <a href="materia.html">
                                     <figure class="box-figure">
                                         <span class="editoria-tag">Política</span>
                                         <img src="https://placehold.co/800x500/EEE/333?text=POL" alt="img">
@@ -403,8 +410,7 @@
                         </div>
                         <div class="box-list">
                             <article class="box-item">
-                                <a href="materia.html"
-                                    style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;">
+                                <a href="materia.html">
                                     <figure class="box-figure">
                                         <span class="editoria-tag">Esporte</span>
                                         <img src="https://placehold.co/800x500/EEE/333?text=ESP" alt="img">
@@ -417,8 +423,7 @@
                                 </a>
                             </article>
                             <article class="box-item">
-                                <a href="materia.html"
-                                    style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;">
+                                <a href="materia.html">
                                     <figure class="box-figure">
                                         <span class="editoria-tag">Esporte</span>
                                         <img src="https://placehold.co/800x500/EEE/333?text=ESP" alt="img">
@@ -440,8 +445,7 @@
                         </div>
                         <div class="box-list">
                             <article class="box-item">
-                                <a href="materia.html"
-                                    style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;">
+                                <a href="materia.html">
                                     <figure class="box-figure">
                                         <span class="editoria-tag">Economia</span>
                                         <img src="https://placehold.co/800x500/EEE/333?text=ECO" alt="img">
@@ -454,8 +458,7 @@
                                 </a>
                             </article>
                             <article class="box-item">
-                                <a href="materia.html"
-                                    style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;">
+                                <a href="materia.html">
                                     <figure class="box-figure">
                                         <span class="editoria-tag">Economia</span>
                                         <img src="https://placehold.co/800x500/EEE/333?text=ECO" alt="img">
@@ -477,8 +480,7 @@
                         </div>
                         <div class="box-list">
                             <article class="box-item">
-                                <a href="materia.html"
-                                    style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;">
+                                <a href="materia.html">
                                     <figure class="box-figure">
                                         <span class="editoria-tag">Cultura</span>
                                         <img src="https://placehold.co/800x500/EEE/333?text=CUL" alt="img">
@@ -491,8 +493,7 @@
                                 </a>
                             </article>
                             <article class="box-item">
-                                <a href="materia.html"
-                                    style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;">
+                                <a href="materia.html">
                                     <figure class="box-figure">
                                         <span class="editoria-tag">Cultura</span>
                                         <img src="https://placehold.co/800x500/EEE/333?text=CUL" alt="img">
@@ -507,6 +508,152 @@
                         </div>
                     </div>
 
+                </div>
+            </section>
+
+            <!-- FEATURE: ESPORTES -->
+            <section class="region-block region-esportes">
+                <div class="region-header">
+                    <h2 class="region-title">Esportes</h2>
+                    <a href="#" class="btn-region-view">Ver Todas</a>
+                </div>
+                <div class="region-grid">
+                    <div class="region-main-article">
+                        <a href="materia.html">
+                            <span class="region-geo-tag">Futebol</span>
+                            <img src="https://placehold.co/800x500/388E3C/fff?text=FUTEBOL" alt="Esporte">
+                            <h3>Seleção Brasileira inicia preparação para a Copa do Mundo</h3>
+                        </a>
+                    </div>
+                    <div class="region-list">
+                        <div class="region-list-item">
+                            <a href="materia.html" class="flex"
+                                style="align-items:flex-start; gap:15px; color:inherit;">
+                                <img src="https://placehold.co/200x140/eee/333?text=ESP" alt="Img">
+                                <div class="region-list-info">
+                                    <span class="region-geo-tag">Vôlei</span>
+                                    <h4>Brasil vence Argentina e conquista título sul-americano</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="region-list-item">
+                            <a href="materia.html" class="flex"
+                                style="align-items:flex-start; gap:15px; color:inherit;">
+                                <img src="https://placehold.co/200x140/eee/333?text=ESP" alt="Img">
+                                <div class="region-list-info">
+                                    <span class="region-geo-tag">F1</span>
+                                    <h4>GP de Interlagos terá ingressos esgotados em tempo recorde</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="region-list-item">
+                            <a href="materia.html" class="flex"
+                                style="align-items:flex-start; gap:15px; color:inherit;">
+                                <img src="https://placehold.co/200x140/eee/333?text=ESP" alt="Img">
+                                <div class="region-list-info">
+                                    <span class="region-geo-tag">Basquete</span>
+                                    <h4>Flamengo vence clássico contra o Vasco no NBB</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="region-ad-space">
+                        Publicidade 300x250
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURE: POLÍTICA -->
+            <section class="region-block region-politica">
+                <div class="region-header">
+                    <h2 class="region-title">Política</h2>
+                    <a href="#" class="btn-region-view">Ver Todas</a>
+                </div>
+                <div class="region-grid">
+                    <div class="region-main-article">
+                        <a href="materia.html">
+                            <span class="region-geo-tag">Congresso</span>
+                            <img src="https://placehold.co/800x500/455A64/fff?text=POLITICA" alt="Politica">
+                            <h3>Votação da reforma administrativa é adiada para próxima semana</h3>
+                        </a>
+                    </div>
+                    <div class="region-list">
+                        <div class="region-list-item">
+                            <a href="materia.html" class="flex"
+                                style="align-items:flex-start; gap:15px; color:inherit;">
+                                <img src="https://placehold.co/200x140/eee/333?text=POL" alt="Img">
+                                <div class="region-list-info">
+                                    <span class="region-geo-tag">Senado</span>
+                                    <h4>CPI da Saúde ouve novos depoimentos nesta terça</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="region-list-item">
+                            <a href="materia.html" class="flex"
+                                style="align-items:flex-start; gap:15px; color:inherit;">
+                                <img src="https://placehold.co/200x140/eee/333?text=POL" alt="Img">
+                                <div class="region-list-info">
+                                    <span class="region-geo-tag">Planalto</span>
+                                    <h4>Presidente anuncia novo pacote de investimentos em infraestrutura</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="region-ad-space">
+                        Publicidade 300x250
+                    </div>
+                </div>
+            </section>
+
+            <!-- 1. RIO DE JANEIRO -->
+            <section class="region-block region-rio">
+                <div class="region-header">
+                    <h2 class="region-title">Rio de Janeiro</h2>
+                    <a href="#" class="btn-region-view">Ver Todas</a>
+                </div>
+                <div class="region-grid">
+                    <div class="region-main-article">
+                        <a href="materia.html">
+                            <span class="region-geo-tag">Rio de Janeiro</span>
+                            <img src="https://placehold.co/800x500/D32F2F/fff?text=RIO" alt="Rio">
+                            <h3>Prefeitura do Rio anuncia novas obras na Zona Oeste</h3>
+                        </a>
+                    </div>
+                    <div class="region-list">
+                        <div class="region-list-item">
+                            <a href="materia.html" class="flex"
+                                style="align-items:flex-start; gap:15px; color:inherit;">
+                                <img src="https://placehold.co/200x140/eee/333?text=RIO" alt="Img">
+                                <div class="region-list-info">
+                                    <span class="region-geo-tag">Capital</span>
+                                    <h4>Carnaval 2025: venda de ingressos começa nesta quarta</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="region-list-item">
+                            <a href="materia.html" class="flex"
+                                style="align-items:flex-start; gap:15px; color:inherit;">
+                                <img src="https://placehold.co/200x140/eee/333?text=RIO" alt="Img">
+                                <div class="region-list-info">
+                                    <span class="region-geo-tag">Zona Sul</span>
+                                    <h4>Operação verão reforça segurança nas praias</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="region-list-item">
+                            <a href="materia.html" class="flex"
+                                style="align-items:flex-start; gap:15px; color:inherit;">
+                                <img src="https://placehold.co/200x140/eee/333?text=RIO" alt="Img">
+                                <div class="region-list-info">
+                                    <span class="region-geo-tag">Niterói</span>
+                                    <h4>Ponte Rio-Niterói terá interdição parcial para manutenção</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="region-ad-space">
+                        Publicidade 300x250
+                    </div>
                 </div>
             </section>
 

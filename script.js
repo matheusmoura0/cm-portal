@@ -29,11 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const regionHeaderConfig = {
+            'Selecione a região': {
+                title: 'Correio da Manhã',
+                subtitle: 'PORTAL',
+                bgColor: '#D32F2F', // Red
+                textColor: 'light'
+            },
             'Rio de Janeiro': {
                 title: 'Correio da Manhã',
-                subtitle: '',
-                bgColor: '#fff', // White header for Rio
-                textColor: 'dark'
+                subtitle: 'EDIÇÃO RIO DE JANEIRO',
+                bgColor: '#D32F2F', // Red
+                textColor: 'light'
             },
             'Sul Fluminense': {
                 title: 'Correio Sul Fluminense',

@@ -783,8 +783,8 @@ img {
 
 .editorias-grid-layout {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
 .editoria-box {
@@ -799,20 +799,20 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-bottom: 2px solid var(--cm-red);
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 }
 
 .box-header h3 {
     font-family: var(--font-serif);
-    font-size: 18px;
+    font-size: 20px;
     color: #111;
     margin: 0;
 }
 
 .box-header a {
-    font-size: 11px;
+    font-size: 12px;
     color: #666;
     font-weight: 600;
     text-transform: uppercase;
@@ -821,31 +821,47 @@ img {
 .box-list {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .box-item {
     display: flex;
     flex-direction: column;
-    /* Changed to column for vertical card layout */
-    gap: 12px;
+    /* The HTML anchor tag inside will handle the row direction */
+    gap: 0;
+}
+
+/* Targeting the anchor inside box-item for horizontal layout */
+.box-item a {
+    display: flex !important;
+    gap: 15px !important;
+    text-decoration: none;
+    color: inherit;
+    flex-direction: row !important;
     align-items: flex-start;
 }
 
 .box-figure {
     position: relative;
-    width: 100%;
+    width: 140px;
+    /* Fixed width for horizontal image */
+    flex-shrink: 0;
     margin: 0;
     overflow: hidden;
     border-radius: 4px;
+    height: 100px;
+    /* Fixed height */
 }
 
-/* .editoria-tag rule removed as it is now shared */
+/* Editoria tag might need adjustment or removal if too small */
+.editoria-tag {
+    display: none;
+    /* Hide tag in small horizontal list to save space */
+}
 
 .box-item img {
     width: 100%;
-    height: 180px;
-    /* Fixed height for consistent card look */
+    height: 100%;
     object-fit: cover;
     transition: transform 0.4s;
     background: #eee;
@@ -855,13 +871,17 @@ img {
     transform: scale(1.05);
 }
 
-.box-info h4 {
-    font-family: var(--font-serif);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 6px;
-    color: #222;
+.box-info {
+    flex: 1;
+    /* Take remaining space */
+}
+
+font-family: var(--font-serif);
+font-size: 16px;
+font-weight: 700;
+line-height: 1.3;
+margin-bottom: 6px;
+color: #222;
 }
 
 .box-info p {
@@ -1706,4 +1726,186 @@ footer {
         align-items: flex-start;
         gap: 10px;
     }
+}
+
+/* --- REGION SECTIONS --- */
+.region-block {
+    margin-bottom: 50px;
+}
+
+.region-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: var(--region-color, #333);
+    border-radius: 4px 4px 0 0;
+}
+
+.region-title {
+    font-family: var(--font-sans);
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.btn-region-view {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.btn-region-view:hover {
+    background: #fff;
+    color: var(--region-color, #333);
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 0.8fr;
+    gap: 30px;
+}
+
+/* Region Color Modifiers */
+.region-rio {
+    --region-color: #D32F2F;
+}
+
+.region-sul {
+    --region-color: #000000;
+}
+
+.region-petro {
+    --region-color: #8E24AA;
+}
+
+.region-campinas {
+    --region-color: #003366;
+}
+
+.region-df {
+    --region-color: #0288D1;
+}
+
+/* Region Content Styles */
+.region-main-article {
+    position: relative;
+}
+
+.region-main-article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.region-main-article h3 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.region-geo-tag {
+    color: var(--region-color);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.region-list-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.region-list-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.region-list-item img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.region-list-info h4 {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.region-ad-space {
+    background: #f5f5f5;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .region-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .region-ad-space {
+        display: none;
+    }
+}
+
+/* Region Color Modifiers */
+.region-rio {
+    --region-color: #D32F2F;
+}
+
+.region-sul {
+    --region-color: #000000;
+}
+
+.region-petro {
+    --region-color: #8E24AA;
+}
+
+.region-campinas {
+    --region-color: #003366;
+}
+
+.region-df {
+    --region-color: #0288D1;
+}
+
+.region-esportes {
+    --region-color: #388E3C;
+}
+
+.region-politica {
+    --region-color: #455A64;
 }

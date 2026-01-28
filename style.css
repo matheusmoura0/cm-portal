@@ -876,12 +876,13 @@ img {
     /* Take remaining space */
 }
 
-font-family: var(--font-serif);
-font-size: 16px;
-font-weight: 700;
-line-height: 1.3;
-margin-bottom: 6px;
-color: #222;
+.box-info h3 {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    color: #222;
 }
 
 .box-info p {
@@ -1233,29 +1234,78 @@ footer {
 /* --- EDITORIA PAGE STYLES --- */
 .page-title-row {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    /* Changed from flex-end to center */
-    justify-content: space-between;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-    gap: 20px;
-    /* Prevent overlap */
+    justify-content: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0;
+    gap: 15px;
+    background-color: var(--cm-gray-bg);
+    margin-left: -100vw;
+    margin-right: -100vw;
+    padding-left: 100vw;
+    padding-right: 100vw;
+    /* Full width background trick while keeping content centered if container is limited, 
+       but here context is inside main container. We might need to break out or just style the block.
+       Actually, `pad` is inside `main.container`. To achieve full width bg, we'd need to move it out 
+       or use relative positioning trick. For now, let's just style the box nicely as a block distinct from content. */
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.centered-title-section {
+    background-color: #f9f9f7;
+    /* Light beige/gray */
+    border-bottom: none;
+    /* Remove simple border, maybe add top/bottom borders */
+    border-top: 1px solid #111;
+    border-bottom: 4px solid #111;
+    /* More distinct separation */
+    padding: 40px 0 20px 0;
+    margin-bottom: 40px;
 }
 
 .page-title {
     font-family: var(--font-serif);
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 900;
-    color: #111;
+    color: #003366;
+    /* Deep Blue like reference */
     margin: 0;
     line-height: 1;
+    text-align: center;
 }
 
-.page-subtitle {
-    color: #666;
-    margin: 5px 0 0 0;
-    font-size: 14px;
+.editoria-subnav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.editoria-subnav a {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.editoria-subnav a:hover {
+    color: var(--cm-red);
+}
+
+.editoria-subnav .sep {
+    color: #ccc;
+    font-size: 10px;
 }
 
 .share-buttons {
@@ -1292,41 +1342,92 @@ footer {
 
 .featured-editoria-card {
     margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 40px;
 }
 
-.img-wrap-tag {
+.featured-link-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    flex-direction: row;
+    /* Text on Left, Image on Right */
+}
+
+/* Specific structure: Text Left (flex-grow), Image Right (fixed/flex) */
+.featured-text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-img-wrap {
+    flex: 0 0 55%;
+    /* Image takes ~55% width */
+    margin: 0;
     position: relative;
     overflow: hidden;
-    margin-bottom: 15px;
     border-radius: 4px;
 }
 
-.img-wrap-tag img {
+.featured-img-wrap img {
     width: 100%;
     height: auto;
+    display: block;
     transition: transform 0.4s;
 }
 
-.featured-editoria-card:hover img {
+.featured-link-flex:hover .featured-img-wrap img {
     transform: scale(1.02);
 }
 
-.featured-editoria-card h2 {
-    font-family: var(--font-serif);
-    font-size: 32px;
+.editoria-tag-inline {
+    display: inline-block;
+    color: var(--cm-red);
+    /* Blue/Red based on section */
     font-weight: 700;
-    line-height: 1.2;
+    font-size: 13px;
+    text-transform: uppercase;
     margin-bottom: 10px;
-    color: #111;
+    font-family: var(--font-sans);
 }
 
-.featured-editoria-card .excerpt {
+.featured-text-content h2 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    /* Large Headline */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #111;
+    letter-spacing: -0.5px;
+}
+
+.featured-text-content .excerpt {
     font-family: var(--font-sans);
     font-size: 16px;
     color: #555;
     line-height: 1.5;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
+
+/* Responsive: Stack on mobile */
+@media (max-width: 768px) {
+    .featured-link-flex {
+        flex-direction: column-reverse;
+        /* Image Top, Text Bottom */
+        gap: 15px;
+    }
+
+    .featured-img-wrap {
+        width: 100%;
+        flex: none;
+    }
+}
+
 
 /* Section Heading "Todas as Notícias" */
 .section-heading-line {
@@ -1352,21 +1453,64 @@ footer {
     flex-direction: column;
 }
 
+.news-card a {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+}
+
+.news-card .img-wrap-tag {
+    flex: 0 0 140px;
+    /* Fixed width for thumbnail */
+    height: 90px;
+    margin-bottom: 0;
+}
+
+.news-card .img-wrap-tag img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-content-wrap {
+    flex: 1;
+    /* Take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically if image is taller */
+}
+
 .news-card h4 {
     font-family: var(--font-serif);
-    font-size: 18px;
+    font-size: 16px;
+    /* Slightly smaller for dense list */
     line-height: 1.3;
     font-weight: 700;
-    margin: 10px 0 8px 0;
+    margin: 0 0 5px 0;
     color: #111;
 }
 
 .news-card .excerpt-small {
-    font-family: var(--font-sans);
-    font-size: 13px;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 8px;
+    display: none;
+    /* Hide excerpt for denser list style if desired, or keep small */
+}
+
+/* Optional: Show excerpt on larger screens if needed, but reference suggests dense title-focused */
+@media (min-width: 900px) {
+    .news-card .excerpt-small {
+        display: block;
+        font-family: var(--font-sans);
+        font-size: 13px;
+        color: #666;
+        line-height: 1.4;
+        margin-bottom: 5px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 }
 
 .btn-load-more {
@@ -1908,4 +2052,78 @@ footer {
 
 .region-politica {
     --region-color: #455A64;
+}
+
+/* --- MOST READ SECTION --- */
+.most-read-section {
+    margin-bottom: 60px;
+}
+
+.most-read-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 0;
+}
+
+.most-read-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    /* Separator between columns */
+}
+
+/* Remove border-right for the last item in each row (every 3rd item) */
+.most-read-item:nth-child(3n) {
+    border-right: none;
+}
+
+/* Remove border-bottom for the last row elements (7, 8, 9) */
+.most-read-item:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.rank-number {
+    font-family: var(--font-serif);
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1;
+    color: #111;
+    min-width: 40px;
+    flex-shrink: 0;
+    margin-top: -5px;
+    /* Alignment tweak */
+}
+
+.item-content a {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+    line-height: 1.4;
+    display: block;
+}
+
+.item-content a:hover {
+    color: var(--cm-red);
+}
+
+@media (max-width: 900px) {
+    .most-read-grid {
+        grid-template-columns: 1fr;
+        border-top: 1px solid #eee;
+    }
+
+    .most-read-item {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+    }
+
+    .most-read-item:last-child {
+        border-bottom: none;
+    }
 }

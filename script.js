@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             'Campinas e Região': {
                 title: 'Correio da Manhã',
-                subtitle: 'ESTADO DE SÃO PAULO',
+                subtitle: 'CAMPINAS E REGIÃO',
                 bgColor: '#003366', // Dark Blue
                 textColor: 'light'
             },
@@ -98,9 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             logoLink.appendChild(subtitleEl);
                         }
                         subtitleEl.textContent = config.subtitle;
+                        // Add display:block inline to ensure it breaks line if needed, matching index.html style
                         subtitleEl.style.display = 'block';
                     } else {
-                        if (subtitleEl) subtitleEl.style.display = 'none';
+                        if (subtitleEl) subtitleEl.remove();
                     }
 
                     // Theme handling (Light/Dark text)
@@ -172,6 +173,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 regionList.classList.remove('active');
             });
+        });
+    }
+
+    // 3. LOAD MORE BUTTON LOGIC
+    const loadMoreBtn = document.querySelector('.btn-load-more');
+    const newsGrid = document.querySelector('.news-grid-2col');
+
+    if (loadMoreBtn && newsGrid) {
+        const moreNewsData = [
+            { tag: 'ECONOMIA', title: 'Startups do Rio recebem aporte milionário para expansão', excerpt: 'Setor de tecnologia segue em alta com novos investimentos.', date: '15/01/2025', author: 'Ana Costa', img: 'https://placehold.co/400x250/EEE/333?text=ECONOMIA' },
+            { tag: 'ESPORTES', title: 'Flamengo anuncia reforço de peso para a temporada', excerpt: 'Novo atacante chega com status de titular absoluto.', date: '15/01/2025', author: 'Carlos Souza', img: 'https://placehold.co/400x250/EEE/333?text=ESPORTES' },
+            { tag: 'CULTURA', title: 'Exposição no MAM celebra 100 anos de modernismo', excerpt: 'Mostra reúne obras inéditas de artistas brasileiros.', date: '15/01/2025', author: 'Redação', img: 'https://placehold.co/400x250/EEE/333?text=CULTURA' },
+            { tag: 'MUNDO', title: 'Acordo climático avança em conferência internacional', excerpt: 'Países se comprometem com metas mais ambiciosas.', date: '15/01/2025', author: 'Redação', img: 'https://placehold.co/400x250/EEE/333?text=MUNDO' }
+        ];
+
+        loadMoreBtn.addEventListener('click', () => {
+            // Simulate loading state
+            const originalText = loadMoreBtn.innerText;
+            loadMoreBtn.innerText = 'Carregando...';
+            loadMoreBtn.disabled = true;
+
+            setTimeout(() => {
+                moreNewsData.forEach(news => {
+                    const article = document.createElement('article');
+                    article.className = 'news-card';
+                    article.innerHTML = `
+                        <a href="materia.html">
+                            <figure class="img-wrap-tag"><span class="tag-floating">${news.tag}</span><img src="${news.img}"></figure>
+                            <div class="news-content-wrap">
+                                <h4>${news.title}</h4>
+                                <p class="excerpt-small">${news.excerpt}</p>
+                                <div class="meta-info">${news.author} • ${news.date}</div>
+                            </div>
+                        </a>
+                    `;
+                    newsGrid.appendChild(article);
+                });
+
+                // Restore button
+                loadMoreBtn.innerText = originalText;
+                loadMoreBtn.disabled = false;
+            }, 500); 
         });
     }
 });

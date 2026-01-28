@@ -2164,4 +2164,15 @@ footer {
         width: auto;
         margin-bottom: 20px;
     }
+
+    /* Center Header Title on Mobile */
+    .header-left-group {
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-subtitle {
+        text-align: center;
+        width: 100%;
+    }
 }
